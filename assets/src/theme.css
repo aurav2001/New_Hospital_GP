@@ -1,0 +1,127 @@
+/* Default palette. The Colors tab in Hospital Settings overrides these at runtime. */
+:root {
+  --bs-primary-50: 236 254 255;
+  --bs-primary-100: 207 250 254;
+  --bs-primary-200: 165 243 252;
+  --bs-primary-300: 103 232 249;
+  --bs-primary-400: 34 211 238;
+  --bs-primary-500: 6 182 212;
+  --bs-primary-600: 8 145 178;
+  --bs-primary-700: 14 116 144;
+  --bs-primary-800: 21 94 117;
+  --bs-primary-900: 22 78 99;
+  --bs-primary-950: 8 51 68;
+
+  --bs-navy-50: 241 245 249;
+  --bs-navy-100: 226 232 240;
+  --bs-navy-200: 203 213 225;
+  --bs-navy-300: 148 163 184;
+  --bs-navy-400: 100 116 139;
+  --bs-navy-500: 71 85 105;
+  --bs-navy-600: 51 65 85;
+  --bs-navy-700: 30 41 59;
+  --bs-navy-800: 15 36 56;
+  --bs-navy-900: 11 27 43;
+  --bs-navy-950: 6 18 32;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body { @apply bg-white text-navy-800 antialiased overflow-x-hidden; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+  ::selection { @apply bg-primary-100 text-navy-900; }
+  h1, h2, h3, h4 { @apply text-navy-800 tracking-tight; }
+  :focus-visible { @apply outline-none ring-2 ring-primary-500 ring-offset-2 ring-offset-white rounded-md; }
+  img { max-width: 100%; height: auto; }
+}
+
+@layer components {
+  .container-x { @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; }
+  .section { @apply py-16 md:py-24; }
+  .section-tight { @apply py-12 md:py-16; }
+
+  .eyebrow { @apply inline-flex items-center gap-2 text-primary-700 font-bold uppercase tracking-[0.18em] text-[11px] sm:text-xs; }
+  .eyebrow::before { content: ''; @apply w-6 h-[2px] rounded-full bg-primary-500; }
+
+  .heading-xl { @apply text-3xl sm:text-4xl md:text-5xl font-extrabold leading-[1.1] text-navy-800; }
+  .heading-lg { @apply text-2xl sm:text-3xl md:text-4xl font-extrabold leading-tight text-navy-800; }
+  .lead { @apply text-base md:text-lg text-navy-500 leading-relaxed; }
+
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-xl font-semibold text-sm px-5 py-3 transition-all duration-200 active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed no-underline; }
+  .btn-lg { @apply px-7 py-4 text-base; }
+  .btn-primary { @apply btn bg-primary-600 text-white hover:bg-primary-700 shadow-lift; }
+  .btn-dark { @apply btn bg-navy-800 text-white hover:bg-navy-900; }
+  .btn-outline { @apply btn bg-white text-navy-800 border border-navy-200 hover:border-primary-400 hover:text-primary-700; }
+  .btn-ghost { @apply btn bg-transparent text-primary-700 hover:bg-primary-50; }
+
+  .card { @apply bg-white rounded-2xl border border-navy-100 shadow-soft; }
+  .card-hover { @apply card transition-all duration-300 hover:-translate-y-1 hover:shadow-card hover:border-primary-200 no-underline; }
+  .icon-tile { @apply w-12 h-12 rounded-xl bg-primary-50 text-primary-700 flex items-center justify-center shrink-0; }
+
+  .input { @apply w-full rounded-xl border border-navy-200 bg-white px-4 py-3 text-sm text-navy-800 placeholder:text-navy-300 transition-colors focus:border-primary-500 focus:ring-2 focus:ring-primary-100 outline-none; }
+  .label { @apply block text-sm font-semibold text-navy-700 mb-1.5; }
+
+  .bg-dots { background-image: radial-gradient(rgb(var(--bs-primary-600) / 0.12) 1px, transparent 1px); background-size: 22px 22px; }
+
+  /* Dashboard tabs */
+  .bs-tab { @apply shrink-0 rounded-xl border border-navy-200 bg-white px-4 py-2.5 text-sm font-bold text-navy-600 transition-colors hover:border-primary-300 hover:text-primary-700; }
+  .bs-tab.is-active { @apply bg-primary-600 text-white border-primary-600; }
+
+  /* Primary nav menu (wp_nav_menu output) */
+  .bs-menu { @apply flex items-center gap-1 list-none m-0 p-0; }
+  .bs-menu > li > a { @apply relative flex items-center gap-1 px-3.5 py-2 text-sm font-semibold rounded-lg whitespace-nowrap text-navy-600 no-underline transition-colors hover:text-primary-700 hover:bg-primary-50; }
+  .bs-menu > li.current-menu-item > a,
+  .bs-menu > li.current_page_item > a { @apply text-primary-700; }
+
+  .bs-menu-mobile { @apply list-none m-0 p-0; }
+  .bs-menu-mobile > li > a { @apply block px-3 py-3 rounded-xl text-base font-semibold text-navy-700 no-underline hover:bg-navy-50; }
+  .bs-menu-mobile > li.current-menu-item > a { @apply text-primary-700 bg-primary-50; }
+
+  .bs-footer-menu { @apply space-y-3 list-none m-0 p-0; }
+  .bs-footer-menu a { @apply text-navy-300 no-underline transition-colors hover:text-white text-sm; }
+
+
+  /* Keep the fixed header and drawer clear of the WordPress admin bar. */
+  .admin-bar #bs-header { top: 32px; }
+  .admin-bar #bs-drawer,
+  .admin-bar #bs-drawer-overlay { top: 32px; }
+  @media screen and (max-width: 782px) {
+    .admin-bar #bs-header,
+    .admin-bar #bs-drawer,
+    .admin-bar #bs-drawer-overlay { top: 46px; }
+  }
+  @media screen and (max-width: 600px) {
+    /* The admin bar stops being fixed below 600px, so it scrolls away with the page. */
+    .admin-bar #bs-header { top: 0; }
+  }
+
+  /* Pagination */
+  .bs-pagination .nav-links { @apply flex items-center justify-center gap-2 flex-wrap; }
+  .bs-pagination .page-numbers { @apply inline-flex items-center justify-center min-w-[40px] h-10 px-3 rounded-xl border border-navy-200 bg-white text-sm font-semibold text-navy-600 no-underline transition-colors hover:border-primary-400 hover:text-primary-700; }
+  .bs-pagination .page-numbers.current { @apply bg-primary-600 text-white border-primary-600; }
+
+  /* CMS / editor content */
+  .prose-cms h2 { @apply text-2xl font-bold text-navy-800 mt-8 mb-3; }
+  .prose-cms h3 { @apply text-xl font-bold text-navy-800 mt-6 mb-2; }
+  .prose-cms p { @apply text-navy-600 leading-relaxed mb-4; }
+  .prose-cms ul { @apply list-disc pl-6 mb-4 text-navy-600 space-y-1; }
+  .prose-cms ol { @apply list-decimal pl-6 mb-4 text-navy-600 space-y-1; }
+  .prose-cms a { @apply text-primary-700 underline; }
+  .prose-cms img { @apply rounded-2xl my-6; }
+  .prose-cms blockquote { @apply border-l-4 border-primary-500 bg-primary-50 rounded-xl px-5 py-4 my-6 italic text-navy-700; }
+  .prose-cms table { @apply w-full text-sm border-collapse my-6; }
+  .prose-cms th, .prose-cms td { @apply border border-navy-100 px-3 py-2 text-left; }
+}
+
+@layer utilities {
+  .hide-scrollbar::-webkit-scrollbar { display: none; }
+  .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  .text-balance { text-wrap: balance; }
+}
+
+@media print {
+  .print\:hidden { display: none !important; }
+}

@@ -1,0 +1,29 @@
+/* Hospital theme admin styling */
+.bs-settings .form-table th { width: 260px; }
+.bs-settings .description { max-width: 640px; }
+
+.bs-meta-row { display: flex; gap: 16px; padding: 10px 0; border-bottom: 1px solid #f0f0f1; align-items: flex-start; }
+.bs-meta-row:last-child { border-bottom: 0; }
+.bs-meta-row > label { width: 260px; font-weight: 600; padding-top: 6px; flex-shrink: 0; }
+.bs-meta-row > div { flex: 1; }
+
+.bs-status { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 11px; font-weight: 700; }
+.bs-status-pending { background: #fef3c7; color: #92400e; }
+.bs-status-confirmed { background: #d1fae5; color: #065f46; }
+.bs-status-completed { background: #cffafe; color: #155e75; }
+.bs-status-cancelled { background: #fee2e2; color: #991b1b; }
+.bs-status-reschedule-requested { background: #ede9fe; color: #5b21b6; }
+
+.bs-stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.bs-stat { display: block; padding: 14px; border: 1px solid #e2e8f0; border-radius: 10px; text-decoration: none; background: #f8fafc; }
+.bs-stat strong { display: block; font-size: 22px; color: #0f2438; line-height: 1.2; }
+.bs-stat span { font-size: 12px; color: #64748b; }
+.bs-stat:hover { border-color: #0891b2; background: #ecfeff; }
+
+/* Colors tab */
+.bs-presets { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+.bs-preset { display: inline-flex; align-items: center; gap: 10px; padding: 8px 14px 8px 8px; border: 1px solid #c3c4c7; border-radius: 8px; background: #fff; cursor: pointer; font-size: 13px; font-weight: 600; color: #1d2327; }
+.bs-preset:hover { border-color: #0891b2; }
+.bs-preset.is-active { border-color: #0891b2; box-shadow: 0 0 0 1px #0891b2; }
+.bs-preset-swatch { display: inline-flex; border-radius: 6px; overflow: hidden; border: 1px solid rgba(0,0,0,.1); }
+.bs-preset-swatch i { display: block; width: 18px; height: 22px; }

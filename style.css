@@ -1,0 +1,16 @@
+/*
+Theme Name: BS Healthcare Hospital
+Theme URI: https://bshealthcarehospital.com
+Author: BS Healthcare Hospital
+Description: Complete eye hospital theme — CMS-driven home page, doctors, specialities, blog, online appointment booking, patient dashboard, doctor portal with digital prescriptions, contact form and full admin settings.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.6
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: bshealthcare
+Tags: hospital, medical, clinic, appointment, custom-menu, featured-images, blog
+*/
+
+/* All styles are compiled into assets/css/theme.css (Tailwind). This file only carries the theme header. */
