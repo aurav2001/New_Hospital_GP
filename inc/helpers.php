@@ -2,7 +2,7 @@
 /**
  * Small helpers used across templates.
  *
- * @package BSHealthcare
+ * @package GPHealthcare
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -87,7 +87,7 @@ function bs_default_settings() {
 		'stats_items'        => "14+|Years of service\n50,000+|Patients treated\n10,000+|Surgeries\n4.9/5|Patient rating",
 		// Footer.
 		'footer_description' => 'Providing clarity and vision to the world through advanced ophthalmology and compassionate care.',
-		'footer_copyright'   => '© ' . gmdate( 'Y' ) . ' BS Healthcare Hospital. All rights reserved.',
+		'footer_copyright'   => '© ' . gmdate( 'Y' ) . ' GP Healthcare Hospital. All rights reserved.',
 		// Appointments.
 		'appt_slots'         => '09:00 AM, 10:00 AM, 11:00 AM, 02:00 PM, 04:00 PM',
 		'appt_fee'           => '150',

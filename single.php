@@ -2,7 +2,7 @@
 /**
  * Single blog post.
  *
- * @package BSHealthcare
+ * @package GPHealthcare
  */
 
 get_header();

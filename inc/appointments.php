@@ -2,7 +2,7 @@
 /**
  * Appointment business logic (slots, creation, queries).
  *
- * @package BSHealthcare
+ * @package GPHealthcare
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

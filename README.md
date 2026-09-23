@@ -1,5 +1,4 @@
-| **Hospital Settings** | Everything on the public site: contact details, social links, WhatsApp, map, home-page sections, **colours**, footer, appointment rules, advertisement popup. |
-# BS Healthcare Hospital — WordPress Theme
+# GP Healthcare Hospital — WordPress Theme
 
 A complete eye-hospital theme: CMS-driven home page, doctors, specialities, blog, online appointment booking, patient dashboard, doctor portal with digital prescriptions, contact form and a full admin settings panel. Everything is managed from wp-admin.
 
@@ -45,7 +44,7 @@ That doctor now sees only their own appointments and can issue prescriptions.
 
 | Menu | What it does |
 |---|---|
-| **Hospital Settings** | Everything on the public site: contact details, social links, WhatsApp, map, home-page sections, footer, appointment rules, advertisement popup. |
+| **Hospital Settings** | Everything on the public site: contact details, social links, WhatsApp, map, home-page sections, **colours**, footer, appointment rules, advertisement popup. |
 | **Doctors** | Doctor profiles: speciality, qualification, experience, languages, fee, available days, on-duty toggle, portal user link. |
 | **Specialities** | Treatment pages: hero text, techniques list, images, doctor keyword. |
 | **Testimonials** | Patient stories shown in the home slider. |

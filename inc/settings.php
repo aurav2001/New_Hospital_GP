@@ -2,7 +2,7 @@
 /**
  * Theme Settings page (Appearance → Hospital Settings).
  *
- * @package BSHealthcare
+ * @package GPHealthcare
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

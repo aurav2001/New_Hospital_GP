@@ -7,7 +7,7 @@
  * Hospital Settings → Colors into a full 50–950 scale and print it, so the
  * whole site recolours without rebuilding the compiled CSS.
  *
- * @package BSHealthcare
+ * @package GPHealthcare
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

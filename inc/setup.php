@@ -2,7 +2,7 @@
 /**
  * Theme supports, menus, assets.
  *
- * @package BSHealthcare
+ * @package GPHealthcare
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

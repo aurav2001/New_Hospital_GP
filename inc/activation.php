@@ -2,7 +2,7 @@
 /**
  * On activation: create required pages, front page, menu and demo content.
  *
- * @package BSHealthcare
+ * @package GPHealthcare
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

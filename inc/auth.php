@@ -2,7 +2,7 @@
 /**
  * Front-end login / registration for patients (and doctors).
  *
- * @package BSHealthcare
+ * @package GPHealthcare
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

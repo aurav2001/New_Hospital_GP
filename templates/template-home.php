@@ -4,7 +4,7 @@
  *
  * Renders the sections listed in Hospital Settings → Home Page → Sections.
  *
- * @package BSHealthcare
+ * @package GPHealthcare
  */
 
 get_header();

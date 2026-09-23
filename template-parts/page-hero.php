@@ -2,7 +2,7 @@
 /**
  * Inner page banner with breadcrumb.
  *
- * @package BSHealthcare
+ * @package GPHealthcare
  * @var array $args ['eyebrow','title','subtitle','crumbs' => [ [label, url|null] ]]
  */
 

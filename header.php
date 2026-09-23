@@ -2,7 +2,7 @@
 /**
  * Site header.
  *
- * @package BSHealthcare
+ * @package GPHealthcare
  */
 
 $bs_phone   = bs_opt( 'phone' );

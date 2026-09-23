@@ -2,7 +2,7 @@
 /**
  * Home – testimonials slider.
  *
- * @package BSHealthcare
+ * @package GPHealthcare
  */
 
 $items = get_posts( array( 'post_type' => 'bs_testimonial', 'numberposts' => 6, 'orderby' => 'menu_order date', 'order' => 'ASC' ) );

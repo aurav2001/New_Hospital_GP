@@ -2,7 +2,7 @@
 /**
  * Home – hero with an inline appointment form.
  *
- * @package BSHealthcare
+ * @package GPHealthcare
  */
 
 $highlights = array_filter( array_map( 'trim', preg_split( '/\r\n|\r|\n/', bs_opt( 'hero_highlights' ) ) ) );

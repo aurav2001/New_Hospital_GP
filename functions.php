@@ -1,8 +1,8 @@
 <?php
 /**
- * BS Healthcare Hospital theme bootstrap.
+ * GP Healthcare Hospital theme bootstrap.
  *
- * @package BSHealthcare
+ * @package GPHealthcare
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

@@ -2,7 +2,7 @@
 /**
  * Home – Ayushman Bharat scheme.
  *
- * @package BSHealthcare
+ * @package GPHealthcare
  */
 
 $benefits = bs_parse_lines( bs_opt( 'ayushman_benefits' ), array( 'title', 'desc', 'img' ) );

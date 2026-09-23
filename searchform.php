@@ -2,7 +2,7 @@
 /**
  * Search form.
  *
- * @package BSHealthcare
+ * @package GPHealthcare
  */
 ?>
 <form role="search" method="get" class="flex gap-2 max-w-md mx-auto" action="<?php echo esc_url( home_url( '/' ) ); ?>">

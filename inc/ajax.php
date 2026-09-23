@@ -2,7 +2,7 @@
 /**
  * AJAX endpoints used by the front-end JS.
  *
- * @package BSHealthcare
+ * @package GPHealthcare
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

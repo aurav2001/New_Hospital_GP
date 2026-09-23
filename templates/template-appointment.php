@@ -2,7 +2,7 @@
 /**
  * Template Name: Book Appointment
  *
- * @package BSHealthcare
+ * @package GPHealthcare
  */
 
 get_header();

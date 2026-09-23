@@ -2,7 +2,7 @@
 /**
  * Meta boxes for doctors, specialities, testimonials and appointments.
  *
- * @package BSHealthcare
+ * @package GPHealthcare
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

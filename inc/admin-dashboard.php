@@ -2,7 +2,7 @@
 /**
  * WP admin dashboard widget with hospital stats.
  *
- * @package BSHealthcare
+ * @package GPHealthcare
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

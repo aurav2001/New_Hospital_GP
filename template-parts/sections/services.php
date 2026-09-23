@@ -2,7 +2,7 @@
 /**
  * Home – specialities grid.
  *
- * @package BSHealthcare
+ * @package GPHealthcare
  */
 
 $services = get_posts( array( 'post_type' => 'bs_service', 'numberposts' => 8, 'orderby' => 'menu_order title', 'order' => 'ASC' ) );

@@ -2,7 +2,7 @@
 /**
  * Custom post types: doctors, services, testimonials, appointments, prescriptions.
  *
- * @package BSHealthcare
+ * @package GPHealthcare
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

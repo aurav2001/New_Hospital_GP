@@ -2,7 +2,7 @@
 /**
  * Appointment row used in both dashboards.
  *
- * @package BSHealthcare
+ * @package GPHealthcare
  * @var array $args ['appt' => array, 'role' => 'patient'|'doctor']
  */
 

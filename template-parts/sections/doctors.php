@@ -2,7 +2,7 @@
 /**
  * Home – doctors.
  *
- * @package BSHealthcare
+ * @package GPHealthcare
  */
 
 $doctors = get_posts( array( 'post_type' => 'bs_doctor', 'numberposts' => 4, 'orderby' => 'menu_order title', 'order' => 'ASC' ) );

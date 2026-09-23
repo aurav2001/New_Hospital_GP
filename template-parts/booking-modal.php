@@ -2,7 +2,7 @@
 /**
  * Appointment booking modal (3 steps, AJAX).
  *
- * @package BSHealthcare
+ * @package GPHealthcare
  */
 
 $bs_user = wp_get_current_user();

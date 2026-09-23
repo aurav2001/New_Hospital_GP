@@ -2,7 +2,7 @@
 /**
  * Template Name: Doctor Portal
  *
- * @package BSHealthcare
+ * @package GPHealthcare
  */
 
 if ( ! is_user_logged_in() ) {

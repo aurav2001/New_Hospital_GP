@@ -2,7 +2,7 @@
 /**
  * Template Name: About Page
  *
- * @package BSHealthcare
+ * @package GPHealthcare
  */
 
 get_header();

@@ -2,7 +2,7 @@
 /**
  * HTML emails: booking notifications, status changes, prescriptions, contact form.
  *
- * @package BSHealthcare
+ * @package GPHealthcare
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

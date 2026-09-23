@@ -2,7 +2,7 @@
 /**
  * Patient and Doctor roles.
  *
- * @package BSHealthcare
+ * @package GPHealthcare
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

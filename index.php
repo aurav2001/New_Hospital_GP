@@ -2,7 +2,7 @@
 /**
  * Blog index / fallback archive.
  *
- * @package BSHealthcare
+ * @package GPHealthcare
  */
 
 get_header();

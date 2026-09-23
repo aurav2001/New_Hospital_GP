@@ -2,7 +2,7 @@
 /**
  * Doctor card.
  *
- * @package BSHealthcare
+ * @package GPHealthcare
  * @var array $args ['id' => post ID]
  */
 

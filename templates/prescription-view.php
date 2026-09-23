@@ -3,7 +3,7 @@
  * Secure prescription view — /prescription/{token}/
  * No login required; the random token is the key.
  *
- * @package BSHealthcare
+ * @package GPHealthcare
  */
 
 $token = get_query_var( 'bs_prescription' );

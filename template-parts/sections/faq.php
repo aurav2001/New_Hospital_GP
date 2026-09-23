@@ -2,7 +2,7 @@
 /**
  * Home – FAQ accordion.
  *
- * @package BSHealthcare
+ * @package GPHealthcare
  */
 
 $faqs = bs_parse_lines( bs_opt( 'faq_items' ), array( 'q', 'a' ) );

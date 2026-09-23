@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Build tooling for the BS Healthcare Hospital WordPress theme (Tailwind CSS).",
+  "description": "Build tooling for the GP Healthcare Hospital WordPress theme (Tailwind CSS).",
   "scripts": {
     "dev": "tailwindcss -i ./assets/src/theme.css -o ./assets/css/theme.css --watch",
     "build": "tailwindcss -i ./assets/src/theme.css -o ./assets/css/theme.css --minify"

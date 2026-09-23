@@ -2,7 +2,7 @@
 /**
  * Site footer, floating actions, booking modal, popup.
  *
- * @package BSHealthcare
+ * @package GPHealthcare
  */
 
 $bs_phone  = bs_opt( 'phone' );

@@ -2,7 +2,7 @@
 /**
  * Home – About / what we do (cards come from the first four Specialities).
  *
- * @package BSHealthcare
+ * @package GPHealthcare
  */
 
 $services = get_posts( array( 'post_type' => 'bs_service', 'numberposts' => 4, 'orderby' => 'menu_order title', 'order' => 'ASC' ) );

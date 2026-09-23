@@ -2,7 +2,7 @@
 /**
  * Template Name: Patient Dashboard
  *
- * @package BSHealthcare
+ * @package GPHealthcare
  */
 
 if ( ! is_user_logged_in() ) {

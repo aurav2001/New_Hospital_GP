@@ -2,7 +2,7 @@
 /**
  * Digital prescriptions written by doctors, viewed via secure token link.
  *
- * @package BSHealthcare
+ * @package GPHealthcare
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

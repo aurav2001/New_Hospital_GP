@@ -2,7 +2,7 @@
 /**
  * Home – latest blog posts.
  *
- * @package BSHealthcare
+ * @package GPHealthcare
  */
 
 $posts_list = get_posts( array( 'numberposts' => 3 ) );

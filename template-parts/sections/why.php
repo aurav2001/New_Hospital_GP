@@ -2,7 +2,7 @@
 /**
  * Home – Why Choose Us.
  *
- * @package BSHealthcare
+ * @package GPHealthcare
  */
 
 $items = bs_parse_lines( bs_opt( 'why_items' ), array( 'title', 'desc', 'img' ) );

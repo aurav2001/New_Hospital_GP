@@ -2,7 +2,7 @@
 /**
  * Home – stats band.
  *
- * @package BSHealthcare
+ * @package GPHealthcare
  */
 
 $stats = bs_parse_lines( bs_opt( 'stats_items' ), array( 'number', 'label' ) );
