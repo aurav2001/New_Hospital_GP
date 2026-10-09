@@ -329,3 +329,63 @@ add_action( 'pre_get_posts', function ( $q ) {
 		}
 	}
 } );
+
+/* ---- Enquiry list columns in admin ---- */
+add_filter( 'manage_bs_enquiry_posts_columns', function ( $cols ) {
+	return array(
+		'cb'         => $cols['cb'],
+		'title'      => __( 'Sender / Subject', 'bshealthcare' ),
+		'bs_sender'  => __( 'Contact Details', 'bshealthcare' ),
+		'bs_message' => __( 'Message Snippet', 'bshealthcare' ),
+		'date'       => __( 'Received On', 'bshealthcare' ),
+	);
+} );
+
+add_action( 'manage_bs_enquiry_posts_custom_column', function ( $col, $id ) {
+	switch ( $col ) {
+		case 'bs_sender':
+			$name  = get_post_meta( $id, '_bs_sender_name', true );
+			$email = get_post_meta( $id, '_bs_sender_email', true );
+			$phone = get_post_meta( $id, '_bs_sender_phone', true );
+			echo '<strong>' . esc_html( $name ) . '</strong><br>';
+			if ( $email ) {
+				echo '<a href="mailto:' . esc_attr( $email ) . '">' . esc_html( $email ) . '</a><br>';
+			}
+			if ( $phone ) {
+				echo '<a href="tel:' . esc_attr( $phone ) . '">' . esc_html( $phone ) . '</a>';
+			}
+			break;
+		case 'bs_message':
+			$post = get_post( $id );
+			echo esc_html( wp_trim_words( $post->post_content, 18 ) );
+			break;
+	}
+}, 10, 2 );
+
+/* ---- Meta box to show full enquiry details on edit page ---- */
+add_action( 'add_meta_boxes', function () {
+	add_meta_box(
+		'bs_enquiry_details',
+		__( 'Enquiry Details', 'bshealthcare' ),
+		function ( $post ) {
+			$name    = get_post_meta( $post->ID, '_bs_sender_name', true );
+			$email   = get_post_meta( $post->ID, '_bs_sender_email', true );
+			$phone   = get_post_meta( $post->ID, '_bs_sender_phone', true );
+			$subject = get_post_meta( $post->ID, '_bs_subject', true );
+			?>
+			<table class="widefat striped" style="margin-top:8px;">
+				<tr><th style="width:160px;"><?php esc_html_e( 'Name', 'bshealthcare' ); ?></th><td><strong><?php echo esc_html( $name ); ?></strong></td></tr>
+				<tr><th><?php esc_html_e( 'Email', 'bshealthcare' ); ?></th><td><a href="mailto:<?php echo esc_attr( $email ); ?>"><?php echo esc_html( $email ); ?></a></td></tr>
+				<tr><th><?php esc_html_e( 'Phone', 'bshealthcare' ); ?></th><td><a href="tel:<?php echo esc_attr( $phone ); ?>"><?php echo esc_html( $phone ); ?></a></td></tr>
+				<tr><th><?php esc_html_e( 'Subject', 'bshealthcare' ); ?></th><td><?php echo esc_html( $subject ); ?></td></tr>
+				<tr><th><?php esc_html_e( 'Full Message', 'bshealthcare' ); ?></th><td><div style="background:#f8fafc;padding:12px;border-radius:6px;line-height:1.6;"><?php echo nl2br( esc_html( $post->post_content ) ); ?></div></td></tr>
+			</table>
+			<p style="margin-top:14px;"><a href="mailto:<?php echo esc_attr( $email ); ?>?subject=Re: <?php echo esc_attr( rawurlencode( $subject ) ); ?>" class="button button-primary"><?php esc_html_e( 'Reply by Email', 'bshealthcare' ); ?></a></p>
+			<?php
+		},
+		'bs_enquiry',
+		'normal',
+		'high'
+	);
+} );
+

@@ -54,6 +54,11 @@ function bs_mail( $to, $subject, $html, $reply_to = '' ) {
 	return wp_mail( $to, $subject, $html, $headers );
 }
 
+/* Ensure WordPress emails come from the hospital brand rather than wordpress@domain */
+add_filter( 'wp_mail_from_name', function ( $name ) {
+	return get_bloginfo( 'name' );
+} );
+
 /* ---- New booking ---- */
 function bs_email_new_appointment( $id ) {
 	$a    = bs_appointment_data( $id );
@@ -67,18 +72,18 @@ function bs_email_new_appointment( $id ) {
 		'Fee'       => '₹' . $a['fee'],
 		'Status'    => ucfirst( $a['status'] ),
 	);
-	// Patient.
+	// Patient Outgoing Email.
 	$intro = 'confirmed' === $a['status']
-		? 'Hi ' . esc_html( $a['name'] ) . ', your appointment is <strong>confirmed</strong>. Please arrive 10 minutes early and carry any previous reports.'
-		: 'Hi ' . esc_html( $a['name'] ) . ', we have received your appointment request. Our team will confirm it shortly.';
-	bs_mail( $a['email'], '📅 Appointment ' . ( 'confirmed' === $a['status'] ? 'confirmed' : 'received' ) . ' – ' . $a['reference'], bs_email_wrap( 'Appointment ' . ( 'confirmed' === $a['status'] ? 'Confirmed' : 'Received' ), $intro, $rows, array( 'View my appointments', bs_page_url( 'templates/template-patient-dashboard.php' ) ) ) );
+		? 'Hi ' . esc_html( $a['name'] ) . ', your appointment at <strong>' . esc_html( get_bloginfo( 'name' ) ) . '</strong> is confirmed. Please arrive 10 minutes early with any previous prescriptions or eye reports.'
+		: 'Hi ' . esc_html( $a['name'] ) . ', we have received your appointment request. Our OPD coordination team will review the slot and send you a confirmation.';
+	bs_mail( $a['email'], '📅 Appointment Booking – ' . $a['reference'] . ' (' . get_bloginfo( 'name' ) . ')', bs_email_wrap( 'Appointment Confirmation', $intro, $rows, array( 'View Patient Portal', bs_page_url( 'templates/template-patient-dashboard.php' ) ), 'For any urgent questions or rescheduling, call ' . bs_opt( 'phone' ) . '.' ) );
 
-	// Doctor + admin.
+	// Incoming Alert for Doctor & Admin.
 	$doctor_email = get_post_meta( $a['doctor_id'], '_bs_email', true );
-	$admin_html   = bs_email_wrap( 'New Appointment', 'A new appointment has been booked on the website.', $rows + array( 'Email' => $a['email'] ), array( 'Open in admin', admin_url( 'post.php?post=' . $id . '&action=edit' ) ) );
+	$admin_html   = bs_email_wrap( 'New Patient Booking', 'A new appointment has been scheduled through the website.', $rows + array( 'Email' => $a['email'] ), array( 'Open in Admin Dashboard', admin_url( 'post.php?post=' . $id . '&action=edit' ) ) );
 	$to           = array_unique( array_filter( array( bs_opt( 'appt_notify_email' ), $doctor_email ) ) );
 	foreach ( $to as $t ) {
-		bs_mail( $t, '📅 New appointment – ' . $a['name'] . ' · ' . $a['date'] . ' ' . $a['time'], $admin_html, $a['email'] );
+		bs_mail( $t, '🔔 [New Appointment] ' . $a['name'] . ' – ' . $a['date'] . ' ' . $a['time'], $admin_html, $a['email'] );
 	}
 }
 add_action( 'bs_appointment_created', 'bs_email_new_appointment' );
@@ -120,11 +125,23 @@ function bs_email_prescription( $id ) {
 }
 add_action( 'bs_prescription_created', 'bs_email_prescription' );
 
-/* ---- Contact form ---- */
+/* ---- Contact form (Incoming alert to Hospital + Auto-acknowledgement to Patient) ---- */
 function bs_send_contact_email( $d ) {
-	$rows = array( 'Name' => esc_html( $d['name'] ), 'Email' => esc_html( $d['email'] ), 'Phone' => esc_html( $d['phone'] ), 'Subject' => esc_html( $d['subject'] ) );
-	$html = bs_email_wrap( 'New website enquiry', nl2br( esc_html( $d['message'] ) ), $rows, array(), 'Reply directly to this email to respond to the patient.' );
-	return bs_mail( bs_opt( 'appt_notify_email' ), '📩 Contact form: ' . ( $d['subject'] ?: 'General enquiry' ) . ' – ' . $d['name'], $html, $d['email'] );
+	$rows = array(
+		'Name'    => esc_html( $d['name'] ),
+		'Email'   => esc_html( $d['email'] ),
+		'Phone'   => esc_html( $d['phone'] ),
+		'Subject' => esc_html( $d['subject'] ? $d['subject'] : 'General enquiry' ),
+	);
+
+	// 1. Incoming mail to Hospital Admin
+	$admin_html = bs_email_wrap( 'New Website Enquiry', nl2br( esc_html( $d['message'] ) ), $rows, array( 'Open Enquiries in Admin', admin_url( 'edit.php?post_type=bs_enquiry' ) ), 'Reply directly to this email to respond to the patient.' );
+	bs_mail( bs_opt( 'appt_notify_email' ), '📩 New Enquiry: ' . ( $d['subject'] ?: 'General enquiry' ) . ' – ' . $d['name'], $admin_html, $d['email'] );
+
+	// 2. Outgoing Auto-reply to the Patient
+	$patient_intro = 'Hi ' . esc_html( $d['name'] ) . ',<br><br>Thank you for reaching out to <strong>' . esc_html( get_bloginfo( 'name' ) ) . '</strong>. We have received your query regarding <em>"' . esc_html( $d['subject'] ?: 'Eye Care Services' ) . '"</em>. Our care coordination team will review your message and contact you within 24 hours.';
+	$patient_html  = bs_email_wrap( 'Thank You for Contacting Us', $patient_intro, array( 'Your Query' => nl2br( esc_html( $d['message'] ) ), 'Hospital Helpline' => esc_html( bs_opt( 'phone' ) ), 'OPD Hours' => esc_html( bs_opt( 'hours_opd' ) ) ), array( 'Visit Our Website', home_url( '/' ) ), 'If this is an ophthalmic emergency, please call ' . bs_opt( 'emergency' ) . ' immediately.' );
+	bs_mail( $d['email'], '✅ Message Received – ' . get_bloginfo( 'name' ), $patient_html );
 }
 
 /* ---- New doctor user welcome (when admin creates a Doctor-role user) ---- */

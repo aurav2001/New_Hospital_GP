@@ -99,7 +99,27 @@ function bs_ajax_contact() {
 	if ( strlen( $message ) < 10 ) {
 		wp_send_json_error( array( 'message' => __( 'Message should be at least 10 characters.', 'bshealthcare' ), 'field' => 'message' ) );
 	}
+	// 1. Save to WordPress Database (Dashboard -> Enquiries)
+	$enquiry_title = ( $subject ? $subject : 'Enquiry' ) . ' - ' . $name;
+	$enquiry_id    = wp_insert_post(
+		array(
+			'post_type'    => 'bs_enquiry',
+			'post_status'  => 'publish',
+			'post_title'   => $enquiry_title,
+			'post_content' => $message,
+		)
+	);
+
+	if ( $enquiry_id && ! is_wp_error( $enquiry_id ) ) {
+		update_post_meta( $enquiry_id, '_bs_sender_name', $name );
+		update_post_meta( $enquiry_id, '_bs_sender_email', $email );
+		update_post_meta( $enquiry_id, '_bs_sender_phone', $phone );
+		update_post_meta( $enquiry_id, '_bs_subject', $subject );
+	}
+
+	// 2. Dispatch emails (Incoming to Hospital + Auto-response to Patient)
 	bs_send_contact_email( compact( 'name', 'email', 'phone', 'subject', 'message' ) );
+
 	wp_send_json_success( array( 'message' => __( 'Thank you! We have received your message and will get back to you within 24 hours.', 'bshealthcare' ) ) );
 }
 add_action( 'wp_ajax_bs_contact', 'bs_ajax_contact' );

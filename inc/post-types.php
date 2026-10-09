@@ -98,6 +98,28 @@ function bs_register_post_types() {
 		)
 	);
 
+	register_post_type(
+		'bs_enquiry',
+		array(
+			'labels'       => array(
+				'name'          => __( 'Enquiries', 'bshealthcare' ),
+				'singular_name' => __( 'Enquiry', 'bshealthcare' ),
+				'all_items'     => __( 'All Enquiries', 'bshealthcare' ),
+				'view_item'     => __( 'View Enquiry', 'bshealthcare' ),
+				'search_items'  => __( 'Search Enquiries', 'bshealthcare' ),
+			),
+			'public'       => false,
+			'show_ui'      => true,
+			'menu_icon'    => 'dashicons-email-alt',
+			'menu_position' => 26,
+			'supports'     => array( 'title', 'editor' ),
+			'capabilities' => array(
+				'create_posts' => 'do_not_allow', // Received from contact form only
+			),
+			'map_meta_cap' => true,
+		)
+	);
+
 	// Secure prescription view: /prescription/{token}/
 	add_rewrite_rule( '^prescription/([A-Za-z0-9]+)/?$', 'index.php?bs_prescription=$matches[1]', 'top' );
 }
