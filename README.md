@@ -1,6 +1,6 @@
-# GP Healthcare Hospital — WordPress Theme
+# Netrana Eye Hospital — WordPress Theme
 
-A complete eye-hospital theme: CMS-driven home page, doctors, specialities, blog, online appointment booking, patient dashboard, doctor portal with digital prescriptions, contact form and a full admin settings panel. Everything is managed from wp-admin.
+Official WordPress theme for **Netrana Eye Hospital Private Limited** (Gaya, Bihar). A complete eye-hospital solution: CMS-driven home page, stitchless Phaco cataract surgery, doctors, online appointment booking, patient portal, and digital doctor dashboard. Everything is easily managed from wp-admin.
 
 ---
 
@@ -18,6 +18,22 @@ On activation the theme automatically:
 - seeds 8 specialities, 4 doctors and 3 testimonials as demo content so nothing looks empty.
 
 3. Go to **Settings → Permalinks** and click **Save** once. This is required for `/doctors/`, `/specialities/` and the secure prescription links to work.
+
+---
+
+## 📥 Demo Content & Navigation Menus Import
+
+Aap do tarikon se demo content import kar sakte hain:
+
+### Method 1 (1-Click Automatic — Recommended)
+- WordPress Admin me **Appearance → Demo Import** (ya **Hospital Settings → Demo Import**) par jayein.
+- **"Import Demo Content & Menus"** button par click karein.
+- Yeh automatically sabhi Pages (Home, About Us, Contact, Appointment, Dashboards, Blog), 8 Specialities, 4 Doctors, 4 Testimonials, Blog posts with categories, aur Header/Footer Nav Menus setup kar dega!
+
+### Method 2 (Standard WordPress XML Importer)
+- WordPress Admin me **Tools → Import** par jayein.
+- **WordPress** ke niche **Run Importer** par click karein.
+- `demo-content.xml` file ko select karke upload karein.
 
 ---
 
@@ -61,7 +77,7 @@ The WP dashboard also gets a **Hospital overview** widget: today's appointments,
 **Hospital Settings → Home Page → Sections (order & visibility)** is a comma-separated list:
 
 ```
-hero,ayushman,why,about,stats,services,doctors,testimonials,blogs,faq
+hero,gallery,why,about,stats,services,doctors,testimonials,blogs,faq
 ```
 
 - Remove a name to hide that section.
@@ -70,7 +86,7 @@ hero,ayushman,why,about,stats,services,doctors,testimonials,blogs,faq
 | Name | Content source |
 |---|---|
 | `hero` | Hospital Settings → Home Page. Includes a **live booking form** (doctor + date + real-time slots) and the stats strip, so patients can book without leaving the hero. |
-| `ayushman` | Hospital Settings (one card per line: `Title\|Description\|Image URL`) |
+| `gallery` | Hospital Grand Opening & Facilities photo showcase (ribbon cutting, medical team, lamp lighting, opening ceremony) |
 | `why` | Hospital Settings (same `Title\|Description\|Image URL` format) |
 | `about` | Headline/text from settings; the four cards are the first four **Specialities** |
 | `stats` | Hospital Settings (`Number\|Label` per line) — numbers count up when scrolled into view |

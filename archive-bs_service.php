@@ -41,7 +41,7 @@ $steps = array(
 								<?php if ( has_post_thumbnail() ) : ?>
 									<?php the_post_thumbnail( 'bs-card', array( 'class' => 'w-full h-full object-cover group-hover:scale-105 transition-transform duration-500', 'loading' => 'lazy' ) ); ?>
 								<?php else : ?>
-									<span class="w-full h-full flex items-center justify-center text-primary-200"><?php bs_the_icon( 'eye', 48 ); ?></span>
+									<img src="<?php echo esc_url( bs_service_image_url( get_the_ID() ) ); ?>" alt="<?php the_title_attribute(); ?>" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
 								<?php endif; ?>
 							</div>
 							<div class="p-5 flex-1 flex flex-col">

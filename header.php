@@ -50,7 +50,7 @@ $bs_services = get_posts( array( 'post_type' => 'bs_service', 'numberposts' => 8
 	<!-- Navbar -->
 	<nav id="bs-nav" class="bg-white border-b border-navy-100 transition-shadow">
 		<div class="container-x h-16 lg:h-[72px] flex items-center justify-between gap-4">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="flex items-center gap-2.5 min-w-0">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="flex items-center gap-2.5 min-w-0" rel="home">
 				<?php if ( $bs_logo_id ) : ?>
 					<?php
 					// Print the image only – the_custom_logo() wraps it in its own <a>,
@@ -60,31 +60,37 @@ $bs_services = get_posts( array( 'post_type' => 'bs_service', 'numberposts' => 8
 						'full',
 						false,
 						array(
-							'class' => 'w-10 h-10 lg:w-11 lg:h-11 rounded-xl object-contain shrink-0',
+							'class' => 'h-10 lg:h-12 w-auto object-contain shrink-0',
 							'alt'   => esc_attr( get_bloginfo( 'name' ) ),
 						)
 					);
 					?>
 				<?php else : ?>
-					<span class="w-10 h-10 lg:w-11 lg:h-11 rounded-xl bg-gradient-to-br from-primary-500 to-primary-700 text-white font-extrabold text-lg flex items-center justify-center shadow-lift shrink-0"><?php echo esc_html( mb_substr( get_bloginfo( 'name' ), 0, 1 ) ); ?></span>
+					<img src="<?php echo esc_url( BS_URI . '/assets/img/logo.svg' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" class="h-12 lg:h-14 w-auto object-contain shrink-0" />
 				<?php endif; ?>
-				<span class="min-w-0 leading-tight">
-					<span class="block font-extrabold text-navy-800 text-base lg:text-lg truncate max-w-[160px] sm:max-w-[240px]"><?php bloginfo( 'name' ); ?></span>
-					<span class="hidden sm:block text-[11px] text-navy-400 font-medium truncate"><?php echo esc_html( bs_opt( 'site_tagline' ) ); ?></span>
-				</span>
+				<span class="sr-only"><?php bloginfo( 'name' ); ?></span>
 			</a>
 
 			<div class="hidden lg:flex items-center gap-1 bs-nav-links">
 				<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'primary',
-						'container'      => false,
-						'menu_class'     => 'bs-menu',
-						'depth'          => 1,
-						'fallback_cb'    => 'bs_fallback_menu',
-					)
-				);
+				$primary_nav_html = '';
+				if ( has_nav_menu( 'primary' ) ) {
+					$primary_nav_html = wp_nav_menu(
+						array(
+							'theme_location' => 'primary',
+							'container'      => false,
+							'menu_class'     => 'bs-menu',
+							'depth'          => 1,
+							'echo'           => false,
+							'fallback_cb'    => false,
+						)
+					);
+				}
+				if ( ! empty( $primary_nav_html ) && false !== strpos( $primary_nav_html, '<li' ) ) {
+					echo $primary_nav_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				} else {
+					bs_fallback_menu( 'bs-menu' );
+				}
 				?>
 				<!-- Mega menu (attached by JS to .has-mega) -->
 				<div id="bs-mega" class="hidden absolute left-1/2 -translate-x-1/2 top-full pt-3 w-[720px]">
@@ -95,7 +101,7 @@ $bs_services = get_posts( array( 'post_type' => 'bs_service', 'numberposts' => 8
 									<?php if ( has_post_thumbnail( $s ) ) : ?>
 										<?php echo get_the_post_thumbnail( $s, 'thumbnail', array( 'class' => 'w-11 h-11 rounded-lg object-cover shrink-0' ) ); ?>
 									<?php else : ?>
-										<span class="w-11 h-11 rounded-lg bg-primary-50 text-primary-700 flex items-center justify-center shrink-0"><?php bs_the_icon( 'eye', 18 ); ?></span>
+										<img src="<?php echo esc_url( bs_service_image_url( $s->ID ) ); ?>" alt="<?php echo esc_attr( get_the_title( $s ) ); ?>" class="w-11 h-11 rounded-lg object-cover shrink-0" loading="lazy">
 									<?php endif; ?>
 									<span class="min-w-0">
 										<span class="block text-sm font-semibold text-navy-800 group-hover:text-primary-700 truncate"><?php echo esc_html( get_the_title( $s ) ); ?></span>
@@ -126,20 +132,46 @@ $bs_services = get_posts( array( 'post_type' => 'bs_service', 'numberposts' => 8
 <div id="bs-drawer-overlay" class="hidden fixed inset-0 bg-navy-900/40 backdrop-blur-sm z-[110] lg:hidden"></div>
 <aside id="bs-drawer" class="fixed top-0 right-0 bottom-0 w-[85%] max-w-sm bg-white z-[120] lg:hidden flex flex-col shadow-2xl translate-x-full transition-transform duration-300">
 	<div class="flex items-center justify-between px-5 h-16 border-b border-navy-100">
-		<span class="font-extrabold text-navy-800"><?php bloginfo( 'name' ); ?></span>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="inline-flex items-center" rel="home">
+			<?php if ( $bs_logo_id ) : ?>
+				<?php
+				echo wp_get_attachment_image(
+					$bs_logo_id,
+					'full',
+					false,
+					array(
+						'class' => 'h-8 w-auto object-contain',
+						'alt'   => esc_attr( get_bloginfo( 'name' ) ),
+					)
+				);
+				?>
+			<?php else : ?>
+				<img src="<?php echo esc_url( BS_URI . '/assets/img/logo.svg' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" class="h-8 w-auto object-contain" />
+			<?php endif; ?>
+			<span class="sr-only"><?php bloginfo( 'name' ); ?></span>
+		</a>
 		<button type="button" id="bs-drawer-close" aria-label="<?php esc_attr_e( 'Close menu', 'bshealthcare' ); ?>" class="w-10 h-10 rounded-lg hover:bg-navy-50 flex items-center justify-center"><?php bs_the_icon( 'x', 20 ); ?></button>
 	</div>
 	<div class="flex-1 overflow-y-auto px-3 py-4 bs-drawer-links">
 		<?php
-		wp_nav_menu(
-			array(
-				'theme_location' => 'primary',
-				'container'      => false,
-				'menu_class'     => 'bs-menu-mobile',
-				'depth'          => 1,
-				'fallback_cb'    => 'bs_fallback_menu',
-			)
-		);
+		$drawer_nav_html = '';
+		if ( has_nav_menu( 'primary' ) ) {
+			$drawer_nav_html = wp_nav_menu(
+				array(
+					'theme_location' => 'primary',
+					'container'      => false,
+					'menu_class'     => 'bs-menu-mobile',
+					'depth'          => 1,
+					'echo'           => false,
+					'fallback_cb'    => false,
+				)
+			);
+		}
+		if ( ! empty( $drawer_nav_html ) && false !== strpos( $drawer_nav_html, '<li' ) ) {
+			echo $drawer_nav_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		} else {
+			bs_fallback_menu( 'bs-menu-mobile' );
+		}
 		?>
 		<div class="mt-3 pt-3 border-t border-navy-100">
 			<p class="px-3 text-[11px] font-bold uppercase tracking-wider text-navy-400 mb-1"><?php esc_html_e( 'Specialities', 'bshealthcare' ); ?></p>

@@ -34,7 +34,7 @@ $overlay    = min( 90, max( 0, (int) bs_opt( 'hero_overlay' ) ) ) / 100;
 	<div class="absolute inset-0 bg-dots opacity-[0.12]" aria-hidden="true"></div>
 	<div class="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-primary-500/20 blur-3xl" aria-hidden="true"></div>
 
-	<div class="container-x relative py-14 md:py-20 lg:py-24">
+	<div class="container-x relative py-12 md:py-16 lg:py-20">
 		<?php /* On mobile these stack as: headline → booking form → highlights/trust. */ ?>
 		<div class="grid lg:grid-cols-12 lg:grid-rows-[auto_auto] gap-x-12 gap-y-9 items-start">
 

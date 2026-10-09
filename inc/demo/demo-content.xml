@@ -1,0 +1,781 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- This is a WordPress eXtended RSS (WXR) file generated for Netrana Eye Hospital Theme Demo Content. -->
+<rss version="2.0"
+	xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:wp="http://wordpress.org/export/1.2/"
+>
+<channel>
+	<title>Netrana Eye Hospital</title>
+	<link>https://netranaeye.com</link>
+	<description>Sight for Life</description>
+	<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+	<language>en-US</language>
+	<wp:wxr_version>1.2</wp:wxr_version>
+	<wp:base_site_url>https://netranaeye.com</wp:base_site_url>
+	<wp:base_blog_url>https://netranaeye.com</wp:base_blog_url>
+
+	<!-- Categories -->
+	<wp:category>
+		<wp:term_id>10</wp:term_id>
+		<wp:category_nicename>cataract-surgery</wp:category_nicename>
+		<wp:category_parent></wp:category_parent>
+		<wp:cat_name><![CDATA[Cataract & Surgery]]></wp:cat_name>
+	</wp:category>
+	<wp:category>
+		<wp:term_id>11</wp:term_id>
+		<wp:category_nicename>preventive-eye-care</wp:category_nicename>
+		<wp:category_parent></wp:category_parent>
+		<wp:cat_name><![CDATA[Preventive Eye Care]]></wp:cat_name>
+	</wp:category>
+	<wp:category>
+		<wp:term_id>12</wp:term_id>
+		<wp:category_nicename>eye-health-tips</wp:category_nicename>
+		<wp:category_parent></wp:category_parent>
+		<wp:cat_name><![CDATA[Eye Health & Prevention]]></wp:cat_name>
+	</wp:category>
+	<wp:category>
+		<wp:term_id>13</wp:term_id>
+		<wp:category_nicename>optometry-refraction</wp:category_nicename>
+		<wp:category_parent></wp:category_parent>
+		<wp:cat_name><![CDATA[Optometry & Refraction]]></wp:cat_name>
+	</wp:category>
+	<wp:category>
+		<wp:term_id>14</wp:term_id>
+		<wp:category_nicename>glaucoma-retina</wp:category_nicename>
+		<wp:category_parent></wp:category_parent>
+		<wp:cat_name><![CDATA[Glaucoma & Retina]]></wp:cat_name>
+	</wp:category>
+
+	<!-- Navigation Menu Terms -->
+	<wp:term>
+		<wp:term_id>20</wp:term_id>
+		<wp:term_taxonomy>nav_menu</wp:term_taxonomy>
+		<wp:term_slug>primary-menu</wp:term_slug>
+		<wp:term_name><![CDATA[Primary Menu]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id>21</wp:term_id>
+		<wp:term_taxonomy>nav_menu</wp:term_taxonomy>
+		<wp:term_slug>footer-quick-links</wp:term_slug>
+		<wp:term_name><![CDATA[Footer Quick Links]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id>22</wp:term_id>
+		<wp:term_taxonomy>nav_menu</wp:term_taxonomy>
+		<wp:term_slug>footer-services</wp:term_slug>
+		<wp:term_name><![CDATA[Footer Services]]></wp:term_name>
+	</wp:term>
+
+	<!-- ================= PAGES ================= -->
+	<!-- Home Page -->
+	<item>
+		<title>Home</title>
+		<link>https://netranaeye.com/</link>
+		<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://netranaeye.com/?page_id=1</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[Welcome to Netrana Eye Hospital - Sight for Life. Leading eye care in Gaya, Bihar.]]></excerpt:encoded>
+		<wp:post_id>1</wp:post_id>
+		<wp:post_date>2026-10-01 12:00:00</wp:post_date>
+		<wp:post_date_gmt>2026-10-01 12:00:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>home</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>1</wp:menu_order>
+		<wp:post_type>page</wp:post_type>
+		<wp:post_password></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:postmeta>
+			<wp:meta_key>_wp_page_template</wp:meta_key>
+			<wp:meta_value><![CDATA[templates/template-home.php]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<!-- About Us Page -->
+	<item>
+		<title>About Us</title>
+		<link>https://netranaeye.com/about-us/</link>
+		<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://netranaeye.com/?page_id=2</guid>
+		<description></description>
+		<content:encoded><![CDATA[<p>Netrana Eye Hospital, located in Gaya, Bihar, is dedicated to protecting and restoring vision for the people of Gaya and the surrounding communities. Our mission is simple: no one in our community should live with preventable blindness.</p><p>The hospital offers comprehensive eye care under one roof, including complete eye examinations, optometry services, and spectacle correction by qualified optometrists. Our specialty is cataract surgery, performed with modern phacoemulsification (Phaco) technology. Phaco is a small-incision, stitch-free technique that allows faster recovery, less discomfort, and better visual outcomes, so patients can return to daily life quickly.</p>]]></content:encoded>
+		<excerpt:encoded><![CDATA[Dedicated to protecting and restoring vision for Gaya and surrounding communities through accessible eye care.]]></excerpt:encoded>
+		<wp:post_id>2</wp:post_id>
+		<wp:post_date>2026-10-01 12:00:00</wp:post_date>
+		<wp:post_date_gmt>2026-10-01 12:00:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>about-us</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>2</wp:menu_order>
+		<wp:post_type>page</wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:postmeta>
+			<wp:meta_key>_wp_page_template</wp:meta_key>
+			<wp:meta_value><![CDATA[templates/template-about.php]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<!-- Contact Page -->
+	<item>
+		<title>Contact</title>
+		<link>https://netranaeye.com/contact/</link>
+		<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://netranaeye.com/?page_id=3</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[Visit Netrana Eye Hospital at Saiyari, Opposite Hanuman Mandir, At Gate, Gaya - Cherki Road, Gaya, Bihar 823001.]]></excerpt:encoded>
+		<wp:post_id>3</wp:post_id>
+		<wp:post_date>2026-10-01 12:00:00</wp:post_date>
+		<wp:post_date_gmt>2026-10-01 12:00:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>contact</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>3</wp:menu_order>
+		<wp:post_type>page</wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:postmeta>
+			<wp:meta_key>_wp_page_template</wp:meta_key>
+			<wp:meta_value><![CDATA[templates/template-contact.php]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<!-- Book Appointment Page -->
+	<item>
+		<title>Book Appointment</title>
+		<link>https://netranaeye.com/book-appointment/</link>
+		<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://netranaeye.com/?page_id=4</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[Book your OPD consultation or stitchless Phaco cataract evaluation online.]]></excerpt:encoded>
+		<wp:post_id>4</wp:post_id>
+		<wp:post_date>2026-10-01 12:00:00</wp:post_date>
+		<wp:post_date_gmt>2026-10-01 12:00:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>book-appointment</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>4</wp:menu_order>
+		<wp:post_type>page</wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:postmeta>
+			<wp:meta_key>_wp_page_template</wp:meta_key>
+			<wp:meta_value><![CDATA[templates/template-appointment.php]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<!-- Patient Login Page -->
+	<item>
+		<title>Patient Login</title>
+		<link>https://netranaeye.com/patient-login/</link>
+		<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://netranaeye.com/?page_id=5</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<wp:post_id>5</wp:post_id>
+		<wp:post_date>2026-10-01 12:00:00</wp:post_date>
+		<wp:post_date_gmt>2026-10-01 12:00:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>patient-login</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>5</wp:menu_order>
+		<wp:post_type>page</wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:postmeta>
+			<wp:meta_key>_wp_page_template</wp:meta_key>
+			<wp:meta_value><![CDATA[templates/template-login.php]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<!-- My Dashboard Page -->
+	<item>
+		<title>My Dashboard</title>
+		<link>https://netranaeye.com/my-dashboard/</link>
+		<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://netranaeye.com/?page_id=6</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<wp:post_id>6</wp:post_id>
+		<wp:post_date>2026-10-01 12:00:00</wp:post_date>
+		<wp:post_date_gmt>2026-10-01 12:00:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>my-dashboard</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>6</wp:menu_order>
+		<wp:post_type>page</wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:postmeta>
+			<wp:meta_key>_wp_page_template</wp:meta_key>
+			<wp:meta_value><![CDATA[templates/template-patient-dashboard.php]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<!-- Doctor Portal Page -->
+	<item>
+		<title>Doctor Portal</title>
+		<link>https://netranaeye.com/doctor-portal/</link>
+		<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://netranaeye.com/?page_id=7</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<wp:post_id>7</wp:post_id>
+		<wp:post_date>2026-10-01 12:00:00</wp:post_date>
+		<wp:post_date_gmt>2026-10-01 12:00:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>doctor-portal</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>7</wp:menu_order>
+		<wp:post_type>page</wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:postmeta>
+			<wp:meta_key>_wp_page_template</wp:meta_key>
+			<wp:meta_value><![CDATA[templates/template-doctor-dashboard.php]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<!-- Blog Page -->
+	<item>
+		<title>Blog</title>
+		<link>https://netranaeye.com/blog/</link>
+		<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://netranaeye.com/?page_id=8</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<wp:post_id>8</wp:post_id>
+		<wp:post_date>2026-10-01 12:00:00</wp:post_date>
+		<wp:post_date_gmt>2026-10-01 12:00:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>blog</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>8</wp:menu_order>
+		<wp:post_type>page</wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+	</item>
+
+	<!-- ================= BLOG POSTS ================= -->
+	<item>
+		<title>Understanding Stitchless Phaco Cataract Surgery: Recovery &amp; Advantages</title>
+		<link>https://netranaeye.com/understanding-stitchless-phaco-cataract-surgery/</link>
+		<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://netranaeye.com/?p=301</guid>
+		<description></description>
+		<content:encoded><![CDATA[<p>Cataract (Motiyabind) is the leading cause of preventable visual impairment in India. At <strong>Netrana Eye Hospital in Gaya, Bihar</strong>, we specialize in modern <em>phacoemulsification (Phaco)</em> technology—a small-incision, stitch-free surgery that has revolutionized vision restoration.</p><h3>Why Choose Stitchless Phaco Surgery?</h3><ul><li><strong>No Injections, No Stitches:</strong> Small-incision ultrasonic probe gently dissolves the cloudy lens with zero stitches.</li><li><strong>Same-Day Discharge:</strong> The procedure takes only 15 to 20 minutes, allowing patients to walk home the same day.</li><li><strong>Premium Foldable IOL:</strong> Advanced monofocal and toric lens implants provide crystal-clear visual acuity.</li><li><strong>Fast Healing:</strong> Return to daily household work and routine within 2 to 3 days.</li></ul><p>Under the leadership of Director Arvind Kumar, Netrana Eye Hospital ensures accessible, safe, and compassionate cataract surgery for every family in Gaya and surrounding districts.</p>]]></content:encoded>
+		<excerpt:encoded><![CDATA[Learn how modern stitchless Phaco cataract surgery at Netrana Eye Hospital provides stitch-free recovery and crystal-clear vision.]]></excerpt:encoded>
+		<wp:post_id>301</wp:post_id>
+		<wp:post_date>2026-10-01 12:00:00</wp:post_date>
+		<wp:post_date_gmt>2026-10-01 12:00:00</wp:post_date_gmt>
+		<wp:comment_status>open</wp:comment_status>
+		<wp:ping_status>open</wp:ping_status>
+		<wp:post_name>understanding-stitchless-phaco-cataract-surgery</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>post</wp:post_type>
+		<category domain="category" nicename="cataract-surgery"><![CDATA[Cataract & Surgery]]></category>
+	</item>
+
+	<item>
+		<title>Complete Guide to Diabetic Retinopathy and Protecting Your Vision</title>
+		<link>https://netranaeye.com/complete-guide-to-diabetic-retinopathy/</link>
+		<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://netranaeye.com/?p=302</guid>
+		<description></description>
+		<content:encoded><![CDATA[<p>Diabetes can silently affect the blood vessels of your retina, leading to diabetic retinopathy if not monitored regularly. At <strong>Netrana Eye Hospital</strong>, we provide digital OCT cross-sectional imaging and dilated fundus examinations to protect your eyesight.</p><h3>Signs You Should Not Ignore:</h3><ul><li>Blurry or fluctuating vision</li><li>Dark floating spots or strings (floaters)</li><li>Difficulty reading or driving at night</li></ul><p>Early diagnosis allows timely management with laser treatment and anti-VEGF therapies, preventing permanent vision impairment.</p>]]></content:encoded>
+		<excerpt:encoded><![CDATA[Essential guidance for diabetic patients in Gaya to detect and manage diabetic eye disease early.]]></excerpt:encoded>
+		<wp:post_id>302</wp:post_id>
+		<wp:post_date>2026-10-01 12:00:00</wp:post_date>
+		<wp:post_date_gmt>2026-10-01 12:00:00</wp:post_date_gmt>
+		<wp:comment_status>open</wp:comment_status>
+		<wp:ping_status>open</wp:ping_status>
+		<wp:post_name>complete-guide-to-diabetic-retinopathy</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>post</wp:post_type>
+		<category domain="category" nicename="preventive-eye-care"><![CDATA[Preventive Eye Care]]></category>
+	</item>
+
+	<item>
+		<title>Glaucoma: The Silent Thief of Sight and Why Regular Pressure Checkups Matter</title>
+		<link>https://netranaeye.com/glaucoma-silent-thief-of-sight/</link>
+		<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://netranaeye.com/?p=303</guid>
+		<description></description>
+		<content:encoded><![CDATA[<p>Glaucoma (Kala Motia) is known as the silent thief of sight because it damages the optic nerve gradually without early pain or obvious warning symptoms until substantial vision is permanently lost.</p><h3>Key Risk Factors:</h3><ul><li>Age above 40 years</li><li>Family history of glaucoma</li><li>High intraocular eye pressure</li><li>Diabetes or high blood pressure</li></ul><p>At Netrana Eye Hospital, we offer tonometry pressure testing, OCT optic nerve imaging, and advanced SLT/YAG laser therapy to keep eye pressure under control.</p>]]></content:encoded>
+		<excerpt:encoded><![CDATA[Why early detection through tonometry and optic nerve screening protects your eyesight against irreversible glaucoma damage.]]></excerpt:encoded>
+		<wp:post_id>303</wp:post_id>
+		<wp:post_date>2026-10-01 12:00:00</wp:post_date>
+		<wp:post_date_gmt>2026-10-01 12:00:00</wp:post_date_gmt>
+		<wp:comment_status>open</wp:comment_status>
+		<wp:ping_status>open</wp:ping_status>
+		<wp:post_name>glaucoma-silent-thief-of-sight</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>post</wp:post_type>
+		<category domain="category" nicename="glaucoma-retina"><![CDATA[Glaucoma & Retina]]></category>
+	</item>
+
+	<!-- ================= SPECIALITIES (bs_service) ================= -->
+	<item>
+		<title>Cataract Surgery</title>
+		<link>https://netranaeye.com/specialities/cataract-surgery/</link>
+		<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://netranaeye.com/?post_type=bs_service&#038;p=401</guid>
+		<description></description>
+		<content:encoded><![CDATA[<p>Advanced stitchless Phaco cataract surgery with foldable intraocular lens implantation. Our ultrasound phacoemulsification technique enables minimal incision, zero stitch, same-day recovery, and crystal-clear vision.</p>]]></content:encoded>
+		<excerpt:encoded><![CDATA[Advanced stitchless Phaco cataract surgery with foldable lens implantation and same-day discharge.]]></excerpt:encoded>
+		<wp:post_id>401</wp:post_id>
+		<wp:post_date>2026-10-01 12:00:00</wp:post_date>
+		<wp:post_date_gmt>2026-10-01 12:00:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>cataract-surgery</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:menu_order>1</wp:menu_order>
+		<wp:post_type>bs_service</wp:post_type>
+		<wp:postmeta>
+			<wp:meta_key>_bs_hero_sub</wp:meta_key>
+			<wp:meta_value><![CDATA[Phaco & SICS Stitchless Surgery]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_bs_tagline</wp:meta_key>
+			<wp:meta_value><![CDATA[Sight for Life]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_bs_keyword</wp:meta_key>
+			<wp:meta_value><![CDATA[cataract]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_bs_scope_title</wp:meta_key>
+			<wp:meta_value><![CDATA[Our Techniques]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_bs_scope_points</wp:meta_key>
+			<wp:meta_value><![CDATA[Phaco Method|Ultrasound small-incision phacoemulsification for rapid recovery.
+Foldable IOL|Premium monofocal, toric, and multifocal lens options.
+Stitch-Free Technique|No pad, no injection, sutureless precision.
+Post-Op Care|Comprehensive follow-up to ensure optimal crystal-clear vision.]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<item>
+		<title>Glaucoma Surgery &amp; Care</title>
+		<link>https://netranaeye.com/specialities/glaucoma-surgery/</link>
+		<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://netranaeye.com/?post_type=bs_service&#038;p=402</guid>
+		<description></description>
+		<content:encoded><![CDATA[<p>Advanced surgical and laser interventions to regulate intraocular pressure and protect the optic nerve from permanent damage.</p>]]></content:encoded>
+		<excerpt:encoded><![CDATA[Advanced interventions to regulate eye pressure and protect the optic nerve.]]></excerpt:encoded>
+		<wp:post_id>402</wp:post_id>
+		<wp:post_date>2026-10-01 12:00:00</wp:post_date>
+		<wp:post_date_gmt>2026-10-01 12:00:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>glaucoma-surgery</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:menu_order>2</wp:menu_order>
+		<wp:post_type>bs_service</wp:post_type>
+		<wp:postmeta>
+			<wp:meta_key>_bs_hero_sub</wp:meta_key>
+			<wp:meta_value><![CDATA[Trabeculectomy & Laser]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_bs_tagline</wp:meta_key>
+			<wp:meta_value><![CDATA[Sight for Life]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_bs_keyword</wp:meta_key>
+			<wp:meta_value><![CDATA[glaucoma]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_bs_scope_title</wp:meta_key>
+			<wp:meta_value><![CDATA[Our Techniques]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_bs_scope_points</wp:meta_key>
+			<wp:meta_value><![CDATA[Trabeculectomy|Creates a new drainage channel to lower pressure.
+Laser Therapy|SLT / YAG laser for early-stage control.
+Monitoring|Regular visual field and OCT tracking.
+Lifetime Care|Long-term management plans.]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<item>
+		<title>Retina Examination &amp; Treatment</title>
+		<link>https://netranaeye.com/specialities/retina-check-up/</link>
+		<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://netranaeye.com/?post_type=bs_service&#038;p=403</guid>
+		<description></description>
+		<content:encoded><![CDATA[<p>Comprehensive retinal examination and treatment for diabetic retinopathy, retinal detachment screening, and macular diseases.</p>]]></content:encoded>
+		<excerpt:encoded><![CDATA[Comprehensive retinal examination and treatment for diabetic retinopathy and macular disease.]]></excerpt:encoded>
+		<wp:post_id>403</wp:post_id>
+		<wp:post_date>2026-10-01 12:00:00</wp:post_date>
+		<wp:post_date_gmt>2026-10-01 12:00:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>retina-check-up</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:menu_order>3</wp:menu_order>
+		<wp:post_type>bs_service</wp:post_type>
+		<wp:postmeta>
+			<wp:meta_key>_bs_hero_sub</wp:meta_key>
+			<wp:meta_value><![CDATA[OCT & Retinal Screening]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_bs_tagline</wp:meta_key>
+			<wp:meta_value><![CDATA[Sight for Life]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_bs_keyword</wp:meta_key>
+			<wp:meta_value><![CDATA[retina]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<item>
+		<title>Computerised Eye &amp; Glass Testing</title>
+		<link>https://netranaeye.com/specialities/glass-check-up/</link>
+		<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://netranaeye.com/?post_type=bs_service&#038;p=404</guid>
+		<description></description>
+		<content:encoded><![CDATA[<p>High-precision auto-refraction and subjective eye testing by qualified optometrists, with customized prescription eyeglasses on-site.</p>]]></content:encoded>
+		<excerpt:encoded><![CDATA[High-precision computer-assisted auto-refraction and prescription corrective spectacles.]]></excerpt:encoded>
+		<wp:post_id>404</wp:post_id>
+		<wp:post_date>2026-10-01 12:00:00</wp:post_date>
+		<wp:post_date_gmt>2026-10-01 12:00:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>glass-check-up</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:menu_order>4</wp:menu_order>
+		<wp:post_type>bs_service</wp:post_type>
+		<wp:postmeta>
+			<wp:meta_key>_bs_hero_sub</wp:meta_key>
+			<wp:meta_value><![CDATA[Optometry & Spectacle Fitting]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_bs_tagline</wp:meta_key>
+			<wp:meta_value><![CDATA[Sight for Life]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_bs_keyword</wp:meta_key>
+			<wp:meta_value><![CDATA[refraction]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<!-- ================= DOCTORS (bs_doctor) ================= -->
+	<item>
+		<title>Dr. Arvind Kumar</title>
+		<link>https://netranaeye.com/doctors/dr-arvind-kumar/</link>
+		<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://netranaeye.com/?post_type=bs_doctor&#038;p=501</guid>
+		<description></description>
+		<content:encoded><![CDATA[<p>Dr. Arvind Kumar is the Director and Senior Consultant at Netrana Eye Hospital in Gaya, Bihar. With over 17 years of clinical leadership in ophthalmology, he specializes in advanced small-incision stitchless Phaco cataract surgery and community vision restoration.</p>]]></content:encoded>
+		<wp:post_id>501</wp:post_id>
+		<wp:post_date>2026-10-01 12:00:00</wp:post_date>
+		<wp:post_date_gmt>2026-10-01 12:00:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>dr-arvind-kumar</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:menu_order>1</wp:menu_order>
+		<wp:post_type>bs_doctor</wp:post_type>
+		<wp:postmeta>
+			<wp:meta_key>_bs_role</wp:meta_key>
+			<wp:meta_value><![CDATA[Director & Senior Cataract Specialist]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_bs_qualification</wp:meta_key>
+			<wp:meta_value><![CDATA[MBBS, MS (Ophthalmology)]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_bs_experience</wp:meta_key>
+			<wp:meta_value><![CDATA[17+ Years]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_bs_languages</wp:meta_key>
+			<wp:meta_value><![CDATA[Hindi, English]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_bs_keyword</wp:meta_key>
+			<wp:meta_value><![CDATA[cataract, refraction]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_bs_online</wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_bs_fee</wp:meta_key>
+			<wp:meta_value><![CDATA[150]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<item>
+		<title>Dr. A. Sharma</title>
+		<link>https://netranaeye.com/doctors/dr-a-sharma/</link>
+		<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://netranaeye.com/?post_type=bs_doctor&#038;p=502</guid>
+		<description></description>
+		<content:encoded><![CDATA[<p>Dr. A. Sharma is a Senior Consultant and Cataract &amp; Glaucoma Surgeon at Netrana Eye Hospital, specializing in micro-incision surgery and intraocular pressure management.</p>]]></content:encoded>
+		<wp:post_id>502</wp:post_id>
+		<wp:post_date>2026-10-01 12:00:00</wp:post_date>
+		<wp:post_date_gmt>2026-10-01 12:00:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>dr-a-sharma</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:menu_order>2</wp:menu_order>
+		<wp:post_type>bs_doctor</wp:post_type>
+		<wp:postmeta>
+			<wp:meta_key>_bs_role</wp:meta_key>
+			<wp:meta_value><![CDATA[Senior Consultant & Cataract Surgeon]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_bs_qualification</wp:meta_key>
+			<wp:meta_value><![CDATA[MBBS, MS (Ophthalmology), FIJR]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_bs_experience</wp:meta_key>
+			<wp:meta_value><![CDATA[15+ Years]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_bs_languages</wp:meta_key>
+			<wp:meta_value><![CDATA[Hindi, English]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_bs_keyword</wp:meta_key>
+			<wp:meta_value><![CDATA[cataract, glaucoma]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_bs_online</wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_bs_fee</wp:meta_key>
+			<wp:meta_value><![CDATA[150]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<!-- ================= TESTIMONIALS (bs_testimonial) ================= -->
+	<item>
+		<title>Ramesh Kumar</title>
+		<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://netranaeye.com/?post_type=bs_testimonial&#038;p=601</guid>
+		<content:encoded><![CDATA[Underwent stitchless Phaco cataract surgery at Netrana Eye Hospital in Gaya. The procedure was completely painless and I was back home the very same afternoon with clear, bright vision!]]></content:encoded>
+		<wp:post_id>601</wp:post_id>
+		<wp:post_date>2026-10-01 12:00:00</wp:post_date>
+		<wp:post_date_gmt>2026-10-01 12:00:00</wp:post_date_gmt>
+		<wp:post_name>ramesh-kumar</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>bs_testimonial</wp:post_type>
+		<wp:postmeta>
+			<wp:meta_key>_bs_role</wp:meta_key>
+			<wp:meta_value><![CDATA[Phaco Cataract Patient]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<item>
+		<title>Sunita Devi</title>
+		<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://netranaeye.com/?post_type=bs_testimonial&#038;p=602</guid>
+		<content:encoded><![CDATA[Received completely stitchless Phaco cataract surgery under Dr. Arvind Kumar. The nursing staff treated us with the utmost dignity, kindness, and professional excellence.]]></content:encoded>
+		<wp:post_id>602</wp:post_id>
+		<wp:post_date>2026-10-01 12:00:00</wp:post_date>
+		<wp:post_date_gmt>2026-10-01 12:00:00</wp:post_date_gmt>
+		<wp:post_name>sunita-devi</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>bs_testimonial</wp:post_type>
+		<wp:postmeta>
+			<wp:meta_key>_bs_role</wp:meta_key>
+			<wp:meta_value><![CDATA[Phaco Cataract Patient]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<item>
+		<title>Rajesh Verma</title>
+		<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://netranaeye.com/?post_type=bs_testimonial&#038;p=603</guid>
+		<content:encoded><![CDATA[The most advanced eye care facility in Gaya. Modern computerised testing, accurate glasses prescription, and extremely hygienic premises. Very helpful front desk.]]></content:encoded>
+		<wp:post_id>603</wp:post_id>
+		<wp:post_date>2026-10-01 12:00:00</wp:post_date>
+		<wp:post_date_gmt>2026-10-01 12:00:00</wp:post_date_gmt>
+		<wp:post_name>rajesh-verma</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_type>bs_testimonial</wp:post_type>
+		<wp:postmeta>
+			<wp:meta_key>_bs_role</wp:meta_key>
+			<wp:meta_value><![CDATA[Eye Examination & Spectacles]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<!-- ================= PRIMARY NAV MENU ITEMS ================= -->
+	<item>
+		<title>Home</title>
+		<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+		<wp:post_id>701</wp:post_id>
+		<wp:post_date>2026-10-01 12:00:00</wp:post_date>
+		<wp:post_name>nav-home</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:menu_order>1</wp:menu_order>
+		<wp:post_type>nav_menu_item</wp:post_type>
+		<category domain="nav_menu" nicename="primary-menu"><![CDATA[Primary Menu]]></category>
+		<wp:postmeta>
+			<wp:meta_key>_menu_item_type</wp:meta_key>
+			<wp:meta_value><![CDATA[post_type]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_menu_item_object</wp:meta_key>
+			<wp:meta_value><![CDATA[page]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_menu_item_object_id</wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<item>
+		<title>About Us</title>
+		<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+		<wp:post_id>702</wp:post_id>
+		<wp:post_date>2026-10-01 12:00:00</wp:post_date>
+		<wp:post_name>nav-about-us</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:menu_order>2</wp:menu_order>
+		<wp:post_type>nav_menu_item</wp:post_type>
+		<category domain="nav_menu" nicename="primary-menu"><![CDATA[Primary Menu]]></category>
+		<wp:postmeta>
+			<wp:meta_key>_menu_item_type</wp:meta_key>
+			<wp:meta_value><![CDATA[post_type]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_menu_item_object</wp:meta_key>
+			<wp:meta_value><![CDATA[page]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_menu_item_object_id</wp:meta_key>
+			<wp:meta_value><![CDATA[2]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<item>
+		<title>Specialities</title>
+		<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+		<wp:post_id>703</wp:post_id>
+		<wp:post_date>2026-10-01 12:00:00</wp:post_date>
+		<wp:post_name>nav-specialities</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:menu_order>3</wp:menu_order>
+		<wp:post_type>nav_menu_item</wp:post_type>
+		<category domain="nav_menu" nicename="primary-menu"><![CDATA[Primary Menu]]></category>
+		<wp:postmeta>
+			<wp:meta_key>_menu_item_type</wp:meta_key>
+			<wp:meta_value><![CDATA[custom]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_menu_item_url</wp:meta_key>
+			<wp:meta_value><![CDATA[/specialities/]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<item>
+		<title>Doctors</title>
+		<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+		<wp:post_id>704</wp:post_id>
+		<wp:post_date>2026-10-01 12:00:00</wp:post_date>
+		<wp:post_name>nav-doctors</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:menu_order>4</wp:menu_order>
+		<wp:post_type>nav_menu_item</wp:post_type>
+		<category domain="nav_menu" nicename="primary-menu"><![CDATA[Primary Menu]]></category>
+		<wp:postmeta>
+			<wp:meta_key>_menu_item_type</wp:meta_key>
+			<wp:meta_value><![CDATA[custom]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_menu_item_url</wp:meta_key>
+			<wp:meta_value><![CDATA[/doctors/]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<item>
+		<title>Blog</title>
+		<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+		<wp:post_id>705</wp:post_id>
+		<wp:post_date>2026-10-01 12:00:00</wp:post_date>
+		<wp:post_name>nav-blog</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:menu_order>5</wp:menu_order>
+		<wp:post_type>nav_menu_item</wp:post_type>
+		<category domain="nav_menu" nicename="primary-menu"><![CDATA[Primary Menu]]></category>
+		<wp:postmeta>
+			<wp:meta_key>_menu_item_type</wp:meta_key>
+			<wp:meta_value><![CDATA[post_type]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_menu_item_object</wp:meta_key>
+			<wp:meta_value><![CDATA[page]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_menu_item_object_id</wp:meta_key>
+			<wp:meta_value><![CDATA[8]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<item>
+		<title>Contact</title>
+		<pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+		<wp:post_id>706</wp:post_id>
+		<wp:post_date>2026-10-01 12:00:00</wp:post_date>
+		<wp:post_name>nav-contact</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:menu_order>6</wp:menu_order>
+		<wp:post_type>nav_menu_item</wp:post_type>
+		<category domain="nav_menu" nicename="primary-menu"><![CDATA[Primary Menu]]></category>
+		<wp:postmeta>
+			<wp:meta_key>_menu_item_type</wp:meta_key>
+			<wp:meta_value><![CDATA[post_type]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_menu_item_object</wp:meta_key>
+			<wp:meta_value><![CDATA[page]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_menu_item_object_id</wp:meta_key>
+			<wp:meta_value><![CDATA[3]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+</channel>
+</rss>

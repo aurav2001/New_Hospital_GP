@@ -35,7 +35,7 @@ function bs_settings_tabs() {
 		'home'         => array(
 			'label'  => __( 'Home Page', 'bshealthcare' ),
 			'fields' => array(
-				'home_sections'      => array( 'Sections (order & visibility)', 'text', 'Comma separated. Available: hero, ayushman, why, about, stats, services, doctors, testimonials, blogs, faq. Remove a name to hide it, reorder to move it.' ),
+				'home_sections'      => array( 'Sections (order & visibility)', 'text', 'Comma separated. Available: hero, gallery, why, about, stats, services, doctors, testimonials, blogs, faq. Remove a name to hide it, reorder to move it.' ),
 				'hero_eyebrow'       => array( 'Hero eyebrow', 'text' ),
 				'hero_title'         => array( 'Hero title', 'text', 'Wrap a word in {curly braces} to colour it.' ),
 				'hero_subtitle'      => array( 'Hero subtitle', 'textarea' ),
@@ -47,10 +47,8 @@ function bs_settings_tabs() {
 				'hero_highlights'    => array( 'Hero highlights (one per line)', 'textarea' ),
 				'hero_rating'        => array( 'Rating badge', 'text' ),
 				'hero_rating_sub'    => array( 'Rating badge subtitle', 'text' ),
-				'ayushman_headline'  => array( 'Ayushman headline', 'text' ),
-				'ayushman_subtitle'  => array( 'Ayushman subtitle', 'textarea' ),
-				'ayushman_benefits'  => array( 'Ayushman cards (one per line: Title|Description|Image URL)', 'textarea' ),
-				'ayushman_note'      => array( 'Ayushman note', 'text' ),
+				'gallery_headline'   => array( 'Gallery headline', 'text' ),
+				'gallery_subtitle'   => array( 'Gallery subtitle', 'textarea' ),
 				'why_headline'       => array( 'Why Choose Us headline', 'text' ),
 				'why_subtitle'       => array( 'Why Choose Us subtitle', 'text' ),
 				'why_items'          => array( 'Why Choose Us cards (one per line: Title|Description|Image URL)', 'textarea' ),
@@ -174,6 +172,7 @@ function bs_settings_page() {
 			<?php foreach ( $tabs as $k => $t ) : ?>
 				<a href="<?php echo esc_url( admin_url( 'admin.php?page=bs-settings&tab=' . $k ) ); ?>" class="nav-tab <?php echo $cur === $k ? 'nav-tab-active' : ''; ?>"><?php echo esc_html( $t['label'] ); ?></a>
 			<?php endforeach; ?>
+			<a href="<?php echo esc_url( admin_url( 'themes.php?page=bs-demo-import' ) ); ?>" class="nav-tab" style="color: #2563eb; font-weight: 700;">📥 <?php esc_html_e( 'Demo Import', 'bshealthcare' ); ?></a>
 		</nav>
 		<form method="post" action="options.php">
 			<?php settings_fields( 'bs_settings_group' ); ?>

@@ -29,7 +29,7 @@ if ( ! $items ) {
 							<?php if ( has_post_thumbnail( $t ) ) : ?>
 								<?php echo get_the_post_thumbnail( $t, 'large', array( 'class' => 'w-full h-full object-cover', 'loading' => 'lazy' ) ); ?>
 							<?php else : ?>
-								<span class="w-full h-full flex items-center justify-center text-primary-200"><?php bs_the_icon( 'quote', 72 ); ?></span>
+								<img src="<?php echo esc_url( bs_testimonial_image_url( $t->ID, $i ) ); ?>" alt="<?php echo esc_attr( $t->post_title ); ?>" loading="lazy" class="w-full h-full object-cover">
 							<?php endif; ?>
 						</div>
 					<?php endforeach; ?>

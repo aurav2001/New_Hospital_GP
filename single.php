@@ -27,13 +27,15 @@ $cats     = get_the_category();
 			</div>
 		</header>
 
-		<?php if ( has_post_thumbnail() ) : ?>
-			<div class="container-x max-w-5xl">
-				<div class="rounded-3xl overflow-hidden aspect-[16/9] bg-navy-100 shadow-card mt-8">
+		<div class="container-x max-w-5xl">
+			<div class="rounded-3xl overflow-hidden aspect-[16/9] bg-navy-100 shadow-card mt-8">
+				<?php if ( has_post_thumbnail() ) : ?>
 					<?php the_post_thumbnail( 'full', array( 'class' => 'w-full h-full object-cover' ) ); ?>
-				</div>
+				<?php else : ?>
+					<img src="<?php echo esc_url( bs_post_image_url( get_the_ID() ) ); ?>" alt="<?php the_title_attribute(); ?>" class="w-full h-full object-cover">
+				<?php endif; ?>
 			</div>
-		<?php endif; ?>
+		</div>
 
 		<div class="container-x max-w-3xl py-10 md:py-14">
 			<div class="prose-cms"><?php the_content(); ?></div>
@@ -67,7 +69,7 @@ $cats     = get_the_category();
 								<?php if ( has_post_thumbnail( $p ) ) : ?>
 									<?php echo get_the_post_thumbnail( $p, 'bs-card', array( 'class' => 'w-full h-full object-cover group-hover:scale-105 transition-transform duration-500', 'loading' => 'lazy' ) ); ?>
 								<?php else : ?>
-									<span class="w-full h-full flex items-center justify-center text-primary-200"><?php bs_the_icon( 'file', 40 ); ?></span>
+									<img src="<?php echo esc_url( bs_post_image_url( $p->ID ) ); ?>" alt="<?php echo esc_attr( get_the_title( $p ) ); ?>" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
 								<?php endif; ?>
 							</div>
 							<div class="p-5"><h3 class="font-bold text-navy-800 group-hover:text-primary-700 line-clamp-2"><?php echo esc_html( get_the_title( $p ) ); ?></h3></div>

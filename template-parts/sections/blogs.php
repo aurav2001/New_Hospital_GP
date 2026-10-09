@@ -30,7 +30,7 @@ $blog_url = get_permalink( get_option( 'page_for_posts' ) );
 						<?php if ( has_post_thumbnail( $p ) ) : ?>
 							<?php echo get_the_post_thumbnail( $p, 'bs-card', array( 'class' => 'w-full h-full object-cover group-hover:scale-105 transition-transform duration-500', 'loading' => 'lazy' ) ); ?>
 						<?php else : ?>
-							<span class="w-full h-full flex items-center justify-center text-primary-200"><?php bs_the_icon( 'file', 48 ); ?></span>
+							<img src="<?php echo esc_url( bs_post_image_url( $p->ID ) ); ?>" alt="<?php echo esc_attr( get_the_title( $p ) ); ?>" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
 						<?php endif; ?>
 						<?php $cat = get_the_category( $p->ID ); ?>
 						<?php if ( $cat ) : ?>

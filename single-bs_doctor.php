@@ -42,7 +42,7 @@ if ( $keywords ) {
 						<?php if ( has_post_thumbnail() ) : ?>
 							<?php the_post_thumbnail( 'bs-portrait', array( 'class' => 'w-full h-full object-cover object-top' ) ); ?>
 						<?php else : ?>
-							<span class="w-full h-full flex items-center justify-center text-navy-300"><?php bs_the_icon( 'user', 96 ); ?></span>
+							<img src="<?php echo esc_url( bs_doctor_image_url( get_the_ID() ) ); ?>" alt="<?php the_title_attribute(); ?>" class="w-full h-full object-cover object-top">
 						<?php endif; ?>
 					</div>
 				</div>

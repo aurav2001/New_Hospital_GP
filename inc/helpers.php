@@ -21,7 +21,11 @@ function bs_opt( $key, $default = '' ) {
 		}
 	}
 	if ( isset( $opts[ $key ] ) && '' !== $opts[ $key ] && null !== $opts[ $key ] ) {
-		return $opts[ $key ];
+		$val = $opts[ $key ];
+		if ( 'home_sections' === $key ) {
+			$val = str_replace( 'ayushman', 'gallery', (string) $val );
+		}
+		return $val;
 	}
 	$defaults = bs_default_settings();
 	if ( '' === $default && isset( $defaults[ $key ] ) ) {
@@ -36,70 +40,68 @@ function bs_opt( $key, $default = '' ) {
 function bs_default_settings() {
 	return array(
 		// General.
-		'color_primary'      => '',
-		'color_dark'         => '',
-		'site_tagline'       => 'World-Class Eye Care',
-		'phone'              => '+91 98765 43210',
+		'color_primary'      => '#2563eb',
+		'color_dark'         => '#0f1f3d',
+		'site_tagline'       => 'Sight for Life',
+		'phone'              => '+91 77649 63174',
 		'emergency'          => '',
-		'email'              => get_option( 'admin_email' ),
-		'address'            => '123 Hospital Road, Your City, State 000000',
-		'hours_opd'          => '8:00 AM – 5:00 PM',
-		'hours_inpatient'    => '24/7',
+		'email'              => 'netranaeye@gmail.com',
+		'address'            => 'Saiyari, Opposite Hanuman Mandir, At Gate, Gaya - Cherki Road, Gaya, Bihar 823001',
+		'hours_opd'          => '8:00 AM – 6:00 PM',
+		'hours_inpatient'    => 'Day Care & Inpatient Available',
 		'whatsapp_enabled'   => '1',
-		'whatsapp_number'    => '',
-		'whatsapp_message'   => 'Hello! I would like to know more about your services.',
-		'map_embed'          => '',
+		'whatsapp_number'    => '919525334214',
+		'whatsapp_message'   => 'Hello Netrana Eye Hospital! I would like to book an appointment or inquire about eye treatment.',
+		'map_embed'          => 'https://maps.google.com/maps?q=Saiyari+Opposite+Hanuman+Mandir+Gaya+Cherki+Road+Gaya+823001&t=&z=15&ie=UTF8&iwloc=&output=embed',
+		'map_link'           => 'https://maps.app.goo.gl/ZaTGDVq2e7E5cdhh9',
 		'social_facebook'    => '',
 		'social_twitter'     => '',
 		'social_instagram'   => '',
 		'social_linkedin'    => '',
 		'social_youtube'     => '',
-		// Home.
-		'home_sections'      => 'hero,ayushman,why,about,services,doctors,testimonials,blogs,faq',
-		'hero_eyebrow'       => 'World-Class Eye Care',
-		'hero_title'         => 'Clear vision, {compassionate} care for every eye.',
-		'hero_subtitle'      => 'Experience a new standard of eye care excellence, where advanced ophthalmology meets a human touch. Cataract, glaucoma, retina, LASIK and more, all under one roof.',
+		'home_sections'      => 'hero,gallery,why,about,services,doctors,testimonials,blogs,faq',
+		'hero_eyebrow'       => 'Netrana Eye Hospital · Gaya, Bihar',
+		'hero_title'         => 'Clear Vision, {Sight for Life} for Every Eye.',
+		'hero_subtitle'      => 'Advanced stitchless Phaco cataract surgery, comprehensive optometry and compassionate eye care in Gaya, Bihar. Dedicated to a community free from avoidable blindness.',
 		'hero_image'         => BS_URI . '/assets/img/hero-bg.jpg',
-		'hero_overlay'       => '45',
+		'hero_overlay'       => '50',
 		'hero_cta'           => 'Book Appointment',
-		'hero_secondary'     => 'Watch Our Story',
+		'hero_secondary'     => 'Our Journey',
 		'hero_secondary_url' => '',
-		'hero_highlights'    => "Ayushman Bharat empanelled\nStitchless Phaco surgery\nSame-day discharge",
+		'hero_highlights'    => "NABH Quality Protocol & Modular OT\nModern Stitchless Phaco Cataract Surgery\nSame-day Discharge & Fast Recovery",
 		'hero_rating'        => '4.9/5 Rating',
-		'hero_rating_sub'    => 'Patient Satisfaction',
-		'ayushman_headline'  => 'Ayushman Bharat Scheme',
-		'ayushman_subtitle'  => 'Government health cover for eligible citizens – get quality eye treatment completely free of cost.',
-		'ayushman_benefits'  => "Free Eye Camp|Under the Ayushman Bharat scheme, FREE for all ration card holders and senior citizens (70+).|" . BS_URI . "/assets/img/ayushman.png\nCashless Cataract Surgery|Free Phaco cataract surgery with lens implantation. No cut, no injection, no pad – same-day discharge.|" . BS_URI . "/assets/img/surgery.png\nDocuments Required|Please carry your Aadhaar card, Ayushman / ration card and your registered mobile phone.|" . BS_URI . '/assets/img/experts.png',
-		'ayushman_note'      => 'Free services are subject to verification of the required government documents.',
-		'why_headline'       => 'Why Choose Us',
-		'why_subtitle'       => 'Delivering excellence in eye care with world-class expertise and compassion.',
-		'why_items'          => "Expert Surgeons|Highly skilled specialists with decades of experience in advanced eye care.|" . BS_URI . "/assets/img/experts.png\nEasy Appointment Booking|Book online in minutes and get instant confirmation on your phone.|" . BS_URI . "/assets/img/booking.png\nCompassionate Care|Patient-centric approach ensuring comfort at every step of treatment.|" . BS_URI . "/assets/img/care.jpg\nTrusted Excellence|A legacy of successful outcomes and thousands of satisfied patients.|" . BS_URI . '/assets/img/trusted.png',
-		'about_headline'     => 'Excellence in Vision Care',
-		'about_text'         => "We don't just treat eyes; we enhance your view of the world. Combining decades of medical expertise with cutting-edge technology to deliver outcomes that exceed expectations.",
+		'hero_rating_sub'    => '60,000+ Happy Patients',
+		'gallery_headline'   => 'Grand Opening & Hospital Facilities',
+		'gallery_subtitle'   => 'Glimpses from the inauguration and state-of-the-art ophthalmic facilities of Netrana Eye Hospital in Gaya, Bihar.',
+		'why_headline'       => 'Why Choose Netrana Eye Hospital',
+		'why_subtitle'       => 'Bringing over 17 years of trusted clinical heritage and modern ophthalmology to Gaya, Bihar.',
+		'why_items'          => "Advanced Phaco Surgery|Small-incision stitch-free cataract surgery with rapid visual recovery.|" . BS_URI . "/assets/img/surgery.png\nState-of-the-Art Hospital & Modular OT|Sterile modular operation theatre and advanced micro-surgical equipment.|" . BS_URI . "/assets/img/inauguration-celebration.jpg\nExperienced Eye Specialists|Dedicated team with 17+ years of legacy in treating complex vision disorders.|" . BS_URI . "/assets/img/inauguration-team.jpg\nCompassionate Patient Care|Clean clinical environment, transparent counselling, and personalised attention.|" . BS_URI . '/assets/img/care.jpg',
+		'about_headline'     => 'Excellence in Vision Care & Cataract Surgery',
+		'about_text'         => 'Netrana Eye Hospital in Gaya is dedicated to protecting and restoring vision. From complete eye examinations to stitchless Phaco cataract surgery, no one in our community should live with preventable blindness.',
 		'services_headline'  => 'Comprehensive Eye Care Services',
-		'services_subtitle'  => 'From routine check-ups to advanced surgery, every treatment is powered by modern technology and experienced specialists.',
+		'services_subtitle'  => 'From routine check-ups to advanced cataract surgery, every treatment is powered by modern ophthalmic technology.',
 		'doctors_headline'   => 'Meet Our Medical Experts',
-		'doctors_subtitle'   => 'Experienced ophthalmologists dedicated to protecting and restoring your vision.',
-		'testimonials_headline' => 'Real Results, Real People',
-		'blogs_headline'     => 'Latest News & Insights',
+		'doctors_subtitle'   => 'Experienced ophthalmologists and eye specialists dedicated to protecting your eyesight.',
+		'testimonials_headline' => 'Real Patient Experiences',
+		'blogs_headline'     => 'Latest Eye Health Insights',
 		'faq_headline'       => 'Frequently Asked Questions',
-		'faq_items'          => "How often should I get my eyes checked?|We recommend an annual exam for adults over 60 and one every two years for younger adults, unless you have risk factors.\nIs cataract surgery painful? How long is recovery?|Modern Phaco cataract surgery is stitchless and painless. Most patients go home the same day and resume normal activities within a few days.\nIs treatment free under Ayushman Bharat?|Yes. Eligible Ayushman Bharat / ration card holders and senior citizens (70+) can get cataract surgery free of cost. Please carry your Aadhaar card, Ayushman/ration card and registered mobile phone.\nWhen should children have their first eye exam?|Screenings are recommended at birth, age 1, age 3 and before starting school.",
-		'stats_items'        => "14+|Years of service\n50,000+|Patients treated\n10,000+|Surgeries\n4.9/5|Patient rating",
+		'faq_items'          => "What is Phaco cataract surgery and how long is recovery?|Phaco (Phacoemulsification) is a modern small-incision, stitch-free cataract procedure. It requires no painful stitches, causes minimal discomfort, and allows most patients to return home the same day and resume daily activities quickly.\nWhat diagnostic and surgical facilities are available at Netrana Eye Hospital?|Netrana Eye Hospital is equipped with sterile modular operation theatres, advanced Phacoemulsification systems, computerized auto-refraction, slit-lamp biomicroscopy, optical prescription testing, and dedicated recovery rooms for same-day discharge.\nWhat are the hospital OPD timings?|Our OPD consultation hours are Monday to Saturday from 8:00 AM to 6:00 PM at Saiyari, Opposite Hanuman Mandir, At Gate Gaya Cherki Road, Gaya.\nHow can I book an appointment?|You can easily book online using the form on this website, call our OPD desk directly at 77649 63174, or message us on WhatsApp at 95253 34214.\nDo you provide complete glasses and spectacles testing?|Yes, our qualified optometrists provide computer-assisted auto-refraction and subjective eye testing with precise prescription eyeglasses on-site.",
+		'stats_items'        => "17+|Years of Heritage\n60,000+|Happy Patients\n40,000+|Successful Surgeries\n40+|Hospital Beds",
 		// Footer.
-		'footer_description' => 'Providing clarity and vision to the world through advanced ophthalmology and compassionate care.',
-		'footer_copyright'   => '© ' . gmdate( 'Y' ) . ' GP Healthcare Hospital. All rights reserved.',
+		'footer_description' => 'Netrana Eye Hospital in Gaya, Bihar is dedicated to protecting and restoring vision through advanced Phaco cataract surgery, optometry, and compassionate eye care.',
+		'footer_copyright'   => '© ' . gmdate( 'Y' ) . ' Netrana Eye Hospital Private Limited. All rights reserved.',
 		// Appointments.
-		'appt_slots'         => '09:00 AM, 10:00 AM, 11:00 AM, 02:00 PM, 04:00 PM',
+		'appt_slots'         => '08:30 AM, 09:30 AM, 10:30 AM, 11:30 AM, 02:00 PM, 03:00 PM, 04:00 PM, 05:00 PM',
 		'appt_fee'           => '150',
 		'appt_auto_confirm'  => '1',
-		'appt_notify_email'  => get_option( 'admin_email' ),
+		'appt_notify_email'  => 'netranaeye@gmail.com',
 		'appt_require_login' => '1',
 		// Advertisement popup.
 		'ad_enabled'         => '',
-		'ad_title'           => 'Free Eye Camp',
-		'ad_text'            => 'Under Ayushman Bharat Scheme, FREE cataract surgery for all ration card holders & senior citizens (70+).',
+		'ad_title'           => 'Free Vision Screening & Cataract Consultation',
+		'ad_text'            => 'Comprehensive eye check-up and expert consultation by senior ophthalmologists at Netrana Eye Hospital.',
 		'ad_image'           => '',
-		'ad_button'          => 'Book Appointment',
+		'ad_button'          => 'Book Consultation',
 	);
 }
 
@@ -149,7 +151,31 @@ function bs_page_url( $template ) {
 			'fields'      => 'ids',
 		)
 	);
-	return $pages ? get_permalink( $pages[0] ) : home_url( '/' );
+	if ( ! empty( $pages ) ) {
+		return get_permalink( $pages[0] );
+	}
+	// Fallback by slug deduced from template filename.
+	$slug = basename( $template, '.php' );
+	$slug = str_replace( array( 'template-', 'page-' ), '', $slug );
+	$p    = get_page_by_path( $slug );
+	if ( ! $p ) {
+		$p = get_page_by_path( $slug . '-us' );
+	}
+	if ( ! $p && function_exists( 'get_page_by_title' ) ) {
+		$p = get_page_by_title( ucwords( str_replace( '-', ' ', $slug ) ) );
+		if ( ! $p && 'about' === $slug ) {
+			$p = get_page_by_title( 'About Us' );
+		}
+	}
+	if ( $p ) {
+		return get_permalink( is_object( $p ) ? $p->ID : $p );
+	}
+
+	// If pretty permalinks are disabled on the server, avoid 404/500 by querying pagename.
+	if ( empty( get_option( 'permalink_structure' ) ) ) {
+		return home_url( '/?pagename=' . $slug );
+	}
+	return home_url( '/' . $slug . '/' );
 }
 
 /**
@@ -158,6 +184,98 @@ function bs_page_url( $template ) {
 function bs_hero_title_html( $title ) {
 	$safe = esc_html( $title );
 	return preg_replace( '/\{(.+?)\}/', '<span class="text-primary-600">$1</span>', $safe );
+}
+
+/**
+ * Smart contextual fallback image URL for a service.
+ */
+function bs_service_image_url( $post_id ) {
+	$thumb = get_the_post_thumbnail_url( $post_id, 'bs-card' );
+	if ( $thumb ) {
+		return $thumb;
+	}
+	$slug = strtolower( (string) get_post_field( 'post_name', $post_id ) . ' ' . get_the_title( $post_id ) . ' ' . get_post_meta( $post_id, '_bs_keyword', true ) );
+	if ( false !== strpos( $slug, 'cataract' ) || false !== strpos( $slug, 'phaco' ) ) {
+		return BS_URI . '/assets/img/service-cataract.jpg';
+	}
+	if ( false !== strpos( $slug, 'glaucoma' ) ) {
+		return BS_URI . '/assets/img/service-glaucoma.jpg';
+	}
+	if ( false !== strpos( $slug, 'retina' ) || false !== strpos( $slug, 'diabetic' ) ) {
+		return BS_URI . '/assets/img/service-retina.jpg';
+	}
+	if ( false !== strpos( $slug, 'glass' ) || false !== strpos( $slug, 'refraction' ) || false !== strpos( $slug, 'optometry' ) ) {
+		return BS_URI . '/assets/img/service-refraction.jpg';
+	}
+	if ( false !== strpos( $slug, 'pediatric' ) || false !== strpos( $slug, 'child' ) || false !== strpos( $slug, 'squint' ) ) {
+		return BS_URI . '/assets/img/service-pediatric.jpg';
+	}
+	if ( false !== strpos( $slug, 'cornea' ) || false !== strpos( $slug, 'pterygium' ) ) {
+		return BS_URI . '/assets/img/service-cornea.jpg';
+	}
+	return BS_URI . '/assets/img/service-cataract.jpg';
+}
+
+/**
+ * Smart contextual fallback image URL for a doctor.
+ */
+function bs_doctor_image_url( $post_id ) {
+	$thumb = get_the_post_thumbnail_url( $post_id, 'large' );
+	if ( $thumb ) {
+		return $thumb;
+	}
+	$title = strtolower( (string) get_the_title( $post_id ) . ' ' . get_post_meta( $post_id, '_bs_role', true ) );
+	if ( false !== strpos( $title, 'arvind' ) || false !== strpos( $title, 'director' ) ) {
+		return BS_URI . '/assets/img/doctor-arvind.jpg';
+	}
+	if ( false !== strpos( $title, 'sharma' ) || false !== strpos( $title, 'cataract' ) ) {
+		return BS_URI . '/assets/img/doctor-sharma.jpg';
+	}
+	if ( false !== strpos( $title, 'verma' ) || false !== strpos( $title, 'retina' ) ) {
+		return BS_URI . '/assets/img/doctor-verma.jpg';
+	}
+	if ( false !== strpos( $title, 'gupta' ) || false !== strpos( $title, 'pediatric' ) ) {
+		return BS_URI . '/assets/img/doctor-gupta.jpg';
+	}
+	return BS_URI . '/assets/img/doctor-arvind.jpg';
+}
+
+/**
+ * Smart contextual fallback image URL for a blog post.
+ */
+function bs_post_image_url( $post_id ) {
+	$thumb = get_the_post_thumbnail_url( $post_id, 'bs-card' );
+	if ( $thumb ) {
+		return $thumb;
+	}
+	$title = strtolower( (string) get_the_title( $post_id ) . ' ' . get_post_field( 'post_name', $post_id ) );
+	if ( false !== strpos( $title, 'glaucoma' ) || false !== strpos( $title, 'pressure' ) ) {
+		return BS_URI . '/assets/img/blog-glaucoma.jpg';
+	}
+	if ( false !== strpos( $title, 'cataract' ) || false !== strpos( $title, 'phaco' ) || false !== strpos( $title, 'stitchless' ) ) {
+		return BS_URI . '/assets/img/blog-cataract.jpg';
+	}
+	if ( false !== strpos( $title, 'glass' ) || false !== strpos( $title, 'refraction' ) || false !== strpos( $title, 'optometry' ) ) {
+		return BS_URI . '/assets/img/service-refraction.jpg';
+	}
+	return BS_URI . '/assets/img/inauguration-team.jpg';
+}
+
+/**
+ * Smart contextual fallback image URL for testimonials.
+ */
+function bs_testimonial_image_url( $post_id, $index = 0 ) {
+	$thumb = get_the_post_thumbnail_url( $post_id, 'large' );
+	if ( $thumb ) {
+		return $thumb;
+	}
+	$images = array(
+		BS_URI . '/assets/img/inauguration-celebration.jpg',
+		BS_URI . '/assets/img/care.jpg',
+		BS_URI . '/assets/img/service-refraction.jpg',
+		BS_URI . '/assets/img/inauguration-team.jpg',
+	);
+	return $images[ $index % count( $images ) ];
 }
 
 /**
@@ -177,7 +295,7 @@ function bs_doctor_data( $post_id ) {
 		'days'          => (array) get_post_meta( $post_id, '_bs_days', true ),
 		'online'        => '1' === get_post_meta( $post_id, '_bs_online', true ),
 		'user_id'       => (int) get_post_meta( $post_id, '_bs_user_id', true ),
-		'image'         => get_the_post_thumbnail_url( $post_id, 'large' ),
+		'image'         => bs_doctor_image_url( $post_id ),
 		'url'           => get_permalink( $post_id ),
 	);
 }

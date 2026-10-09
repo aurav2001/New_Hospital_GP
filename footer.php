@@ -30,9 +30,9 @@ $bs_social = array( 'facebook', 'twitter', 'instagram', 'linkedin', 'youtube' );
 
 	<div class="container-x grid gap-10 md:grid-cols-2 lg:grid-cols-12 pb-12">
 		<div class="lg:col-span-4">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="flex items-center gap-2.5 mb-5">
-				<span class="w-11 h-11 rounded-xl bg-gradient-to-br from-primary-500 to-primary-700 text-white font-extrabold text-lg flex items-center justify-center"><?php echo esc_html( mb_substr( get_bloginfo( 'name' ), 0, 1 ) ); ?></span>
-				<span class="text-lg font-extrabold text-white"><?php bloginfo( 'name' ); ?></span>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="inline-flex items-center mb-5" rel="home">
+				<img src="<?php echo esc_url( BS_URI . '/assets/img/logo-white.svg' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" class="h-10 lg:h-11 w-auto object-contain shrink-0" />
+				<span class="sr-only"><?php bloginfo( 'name' ); ?></span>
 			</a>
 			<p class="text-navy-300 leading-relaxed mb-6 max-w-sm"><?php echo esc_html( bs_opt( 'footer_description' ) ); ?></p>
 			<div class="flex gap-2">
@@ -44,9 +44,24 @@ $bs_social = array( 'facebook', 'twitter', 'instagram', 'linkedin', 'youtube' );
 
 		<div class="lg:col-span-2">
 			<h4 class="text-white font-bold mb-5"><?php esc_html_e( 'Quick Links', 'bshealthcare' ); ?></h4>
-			<?php if ( has_nav_menu( 'footer-quick' ) ) : ?>
-				<?php wp_nav_menu( array( 'theme_location' => 'footer-quick', 'container' => false, 'menu_class' => 'bs-footer-menu', 'depth' => 1 ) ); ?>
-			<?php else : ?>
+			<?php
+			$footer_quick_html = '';
+			if ( has_nav_menu( 'footer-quick' ) ) {
+				$footer_quick_html = wp_nav_menu(
+					array(
+						'theme_location' => 'footer-quick',
+						'container'      => false,
+						'menu_class'     => 'bs-footer-menu',
+						'depth'          => 1,
+						'echo'           => false,
+						'fallback_cb'    => false,
+					)
+				);
+			}
+			if ( ! empty( $footer_quick_html ) && false !== strpos( $footer_quick_html, '<li' ) ) :
+				echo $footer_quick_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			else :
+			?>
 				<ul class="bs-footer-menu">
 					<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Home', 'bshealthcare' ); ?></a></li>
 					<li><a href="<?php echo esc_url( bs_page_url( 'templates/template-about.php' ) ); ?>"><?php esc_html_e( 'About Us', 'bshealthcare' ); ?></a></li>
@@ -60,9 +75,24 @@ $bs_social = array( 'facebook', 'twitter', 'instagram', 'linkedin', 'youtube' );
 
 		<div class="lg:col-span-3">
 			<h4 class="text-white font-bold mb-5"><?php esc_html_e( 'Our Services', 'bshealthcare' ); ?></h4>
-			<?php if ( has_nav_menu( 'footer-services' ) ) : ?>
-				<?php wp_nav_menu( array( 'theme_location' => 'footer-services', 'container' => false, 'menu_class' => 'bs-footer-menu', 'depth' => 1 ) ); ?>
-			<?php else : ?>
+			<?php
+			$footer_serv_html = '';
+			if ( has_nav_menu( 'footer-services' ) ) {
+				$footer_serv_html = wp_nav_menu(
+					array(
+						'theme_location' => 'footer-services',
+						'container'      => false,
+						'menu_class'     => 'bs-footer-menu',
+						'depth'          => 1,
+						'echo'           => false,
+						'fallback_cb'    => false,
+					)
+				);
+			}
+			if ( ! empty( $footer_serv_html ) && false !== strpos( $footer_serv_html, '<li' ) ) :
+				echo $footer_serv_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			else :
+			?>
 				<ul class="bs-footer-menu">
 					<?php foreach ( get_posts( array( 'post_type' => 'bs_service', 'numberposts' => 6, 'orderby' => 'menu_order title', 'order' => 'ASC' ) ) as $s ) : ?>
 						<li><a href="<?php echo esc_url( get_permalink( $s ) ); ?>"><?php echo esc_html( get_the_title( $s ) ); ?></a></li>
@@ -74,11 +104,12 @@ $bs_social = array( 'facebook', 'twitter', 'instagram', 'linkedin', 'youtube' );
 		<div class="lg:col-span-3">
 			<h4 class="text-white font-bold mb-5"><?php esc_html_e( 'Contact', 'bshealthcare' ); ?></h4>
 			<ul class="space-y-4 text-sm">
-				<li class="flex gap-3"><span class="text-primary-400 shrink-0 mt-0.5"><?php bs_the_icon( 'map', 18 ); ?></span><a href="https://www.google.com/maps/search/?api=1&query=<?php echo rawurlencode( $bs_addr ); ?>" target="_blank" rel="noopener" class="text-navy-300 hover:text-white"><?php echo esc_html( $bs_addr ); ?></a></li>
+				<?php $bs_map_url = bs_opt( 'map_link' ) ? bs_opt( 'map_link' ) : 'https://www.google.com/maps/search/?api=1&query=' . rawurlencode( $bs_addr ); ?>
+				<li class="flex gap-3"><span class="text-primary-400 shrink-0 mt-0.5"><?php bs_the_icon( 'map', 18 ); ?></span><a href="<?php echo esc_url( $bs_map_url ); ?>" target="_blank" rel="noopener" class="text-navy-300 hover:text-white"><?php echo esc_html( $bs_addr ); ?></a></li>
 				<li class="flex gap-3"><span class="text-primary-400 shrink-0 mt-0.5"><?php bs_the_icon( 'phone', 18 ); ?></span><a href="<?php echo esc_attr( bs_phone_href( $bs_phone ) ); ?>" class="text-navy-300 hover:text-white"><?php echo esc_html( $bs_phone ); ?></a></li>
 				<li class="flex gap-3"><span class="text-primary-400 shrink-0 mt-0.5"><?php bs_the_icon( 'mail', 18 ); ?></span><a href="mailto:<?php echo esc_attr( $bs_email ); ?>" class="text-navy-300 hover:text-white break-all"><?php echo esc_html( $bs_email ); ?></a></li>
 				<li class="flex gap-3"><span class="text-primary-400 shrink-0 mt-0.5"><?php bs_the_icon( 'clock', 18 ); ?></span>
-					<span class="text-navy-300">OPD: <span class="text-white font-medium"><?php echo esc_html( bs_opt( 'hours_opd' ) ); ?></span><br>Inpatient: <span class="text-white font-medium"><?php echo esc_html( bs_opt( 'hours_inpatient' ) ); ?></span></span>
+					<span class="text-navy-300">OPD: <span class="text-white font-medium"><?php echo esc_html( bs_opt( 'hours_opd' ) ); ?></span><br><span class="text-navy-400 text-xs"><?php echo esc_html( bs_opt( 'hours_inpatient' ) ); ?></span></span>
 				</li>
 			</ul>
 		</div>
@@ -136,6 +167,8 @@ $bs_social = array( 'facebook', 'twitter', 'instagram', 'linkedin', 'youtube' );
 	</div>
 </div>
 <?php endif; ?>
+
+<?php get_template_part( 'template-parts/maker-mark' ); ?>
 
 <?php wp_footer(); ?>
 </body>

@@ -26,7 +26,7 @@ $services = get_posts( array( 'post_type' => 'bs_service', 'numberposts' => 4, '
 						<?php if ( has_post_thumbnail( $s ) ) : ?>
 							<?php echo get_the_post_thumbnail( $s, 'bs-card', array( 'class' => 'w-full h-full object-cover group-hover:scale-105 transition-transform duration-500', 'loading' => 'lazy' ) ); ?>
 						<?php else : ?>
-							<span class="w-full h-full flex items-center justify-center text-primary-200"><?php bs_the_icon( 'eye', 56 ); ?></span>
+							<img src="<?php echo esc_url( bs_service_image_url( $s->ID ) ); ?>" alt="<?php echo esc_attr( get_the_title( $s ) ); ?>" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
 						<?php endif; ?>
 					</div>
 					<div class="p-5 flex-1 flex flex-col">

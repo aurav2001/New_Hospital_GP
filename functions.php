@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'BS_VERSION', '1.0.0' );
+define( 'BS_VERSION', '1.1.0' );
 define( 'BS_DIR', get_template_directory() );
 define( 'BS_URI', get_template_directory_uri() );
 
@@ -27,3 +27,6 @@ require_once BS_DIR . '/inc/ajax.php';
 require_once BS_DIR . '/inc/emails.php';
 require_once BS_DIR . '/inc/admin-dashboard.php';
 require_once BS_DIR . '/inc/activation.php';
+if ( file_exists( BS_DIR . '/inc/demo-importer.php' ) ) {
+	require_once BS_DIR . '/inc/demo-importer.php';
+}

@@ -55,7 +55,7 @@ if ( is_category() ) {
 								<?php if ( has_post_thumbnail() ) : ?>
 									<?php the_post_thumbnail( 'bs-card', array( 'class' => 'w-full h-full object-cover group-hover:scale-105 transition-transform duration-500', 'loading' => 'lazy' ) ); ?>
 								<?php else : ?>
-									<span class="w-full h-full flex items-center justify-center text-primary-200"><?php bs_the_icon( 'file', 48 ); ?></span>
+									<img src="<?php echo esc_url( bs_post_image_url( get_the_ID() ) ); ?>" alt="<?php the_title_attribute(); ?>" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
 								<?php endif; ?>
 								<?php $cat = get_the_category(); ?>
 								<?php if ( $cat ) : ?><span class="absolute top-3 left-3 rounded-full bg-white/95 px-3 py-1 text-[11px] font-bold text-primary-700"><?php echo esc_html( $cat[0]->name ); ?></span><?php endif; ?>
@@ -84,9 +84,25 @@ if ( is_category() ) {
 					?>
 				</div>
 			<?php else : ?>
-				<div class="card p-16 text-center">
-					<p class="text-navy-500 mb-5"><?php esc_html_e( 'No articles found.', 'bshealthcare' ); ?></p>
-					<?php get_search_form(); ?>
+				<div class="card p-12 md:p-16 text-center max-w-xl mx-auto shadow-card">
+					<div class="w-16 h-16 rounded-2xl bg-primary-50 text-primary-600 flex items-center justify-center mx-auto mb-4">
+						<?php bs_the_icon( 'file', 32 ); ?>
+					</div>
+					<h3 class="text-xl font-bold text-navy-800 mb-2"><?php esc_html_e( 'No articles published yet', 'bshealthcare' ); ?></h3>
+					<p class="text-navy-500 mb-6 text-sm"><?php esc_html_e( 'Eye care guides, tips and patient updates will appear here once published.', 'bshealthcare' ); ?></p>
+					<?php if ( current_user_can( 'manage_options' ) ) : ?>
+						<div class="flex flex-wrap items-center justify-center gap-3 mb-6">
+							<a href="<?php echo esc_url( admin_url( 'themes.php?page=bs-demo-import' ) ); ?>" class="btn btn-primary btn-sm">
+								<?php bs_the_icon( 'download', 14 ); ?> <?php esc_html_e( 'Import Demo Articles', 'bshealthcare' ); ?>
+							</a>
+							<a href="<?php echo esc_url( admin_url( 'post-new.php' ) ); ?>" class="btn btn-outline btn-sm">
+								<?php bs_the_icon( 'plus', 14 ); ?> <?php esc_html_e( 'Add New Post', 'bshealthcare' ); ?>
+							</a>
+						</div>
+					<?php endif; ?>
+					<div class="max-w-md mx-auto">
+						<?php get_search_form(); ?>
+					</div>
 				</div>
 			<?php endif; ?>
 		</div>

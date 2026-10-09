@@ -14,7 +14,7 @@ $wa    = bs_whatsapp_url();
 $subjects = array(
 	__( 'General enquiry', 'bshealthcare' ),
 	__( 'Book / reschedule appointment', 'bshealthcare' ),
-	__( 'Ayushman Bharat eligibility', 'bshealthcare' ),
+	__( 'Surgery & treatment consultation', 'bshealthcare' ),
 	__( 'Reports & prescriptions', 'bshealthcare' ),
 	__( 'Feedback / complaint', 'bshealthcare' ),
 );
@@ -27,7 +27,7 @@ $subjects = array(
 		array(
 			'eyebrow'  => __( 'Contact Us', 'bshealthcare' ),
 			'title'    => __( "We're here to help", 'bshealthcare' ),
-			'subtitle' => __( 'Reach out for appointments, reports, Ayushman Bharat queries or anything else. Our team usually responds within a few hours.', 'bshealthcare' ),
+			'subtitle' => __( 'Reach out for appointments, reports, surgery inquiries or anything else. Our team usually responds within a few hours.', 'bshealthcare' ),
 			'crumbs'   => array( array( __( 'Contact', 'bshealthcare' ) ) ),
 		)
 	);
@@ -55,11 +55,12 @@ $subjects = array(
 					</span>
 				</a>
 
-				<a href="https://www.google.com/maps/search/?api=1&query=<?php echo rawurlencode( $addr ); ?>" target="_blank" rel="noopener" class="card-hover p-5 flex items-start gap-4">
+				<?php $contact_map_url = bs_opt( 'map_link' ) ? bs_opt( 'map_link' ) : 'https://www.google.com/maps/search/?api=1&query=' . rawurlencode( $addr ); ?>
+				<a href="<?php echo esc_url( $contact_map_url ); ?>" target="_blank" rel="noopener" class="card-hover p-5 flex items-start gap-4">
 					<span class="icon-tile"><?php bs_the_icon( 'map', 22 ); ?></span>
 					<span>
 						<span class="block font-bold text-navy-800"><?php esc_html_e( 'Visit us', 'bshealthcare' ); ?></span>
-						<span class="block text-sm text-navy-500 mb-1"><?php esc_html_e( 'Get directions on Google Maps.', 'bshealthcare' ); ?></span>
+						<span class="block text-sm text-navy-500 mb-1"><?php esc_html_e( 'View exact hospital location on Google Maps.', 'bshealthcare' ); ?></span>
 						<span class="block font-semibold text-primary-700"><?php echo esc_html( $addr ); ?></span>
 					</span>
 				</a>
@@ -99,7 +100,7 @@ $subjects = array(
 						<input type="text" name="website" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
 						<div class="grid sm:grid-cols-2 gap-4">
 							<div><label class="label" for="c-name"><?php esc_html_e( 'Full name', 'bshealthcare' ); ?></label><input class="input" id="c-name" name="name" type="text" placeholder="<?php esc_attr_e( 'Your name', 'bshealthcare' ); ?>"></div>
-							<div><label class="label" for="c-phone"><?php esc_html_e( 'Phone', 'bshealthcare' ); ?></label><input class="input" id="c-phone" name="phone" type="tel" placeholder="+91 98765 43210"></div>
+							<div><label class="label" for="c-phone"><?php esc_html_e( 'Phone', 'bshealthcare' ); ?></label><input class="input" id="c-phone" name="phone" type="tel" placeholder="+91 77649 63174"></div>
 						</div>
 						<div class="grid sm:grid-cols-2 gap-4">
 							<div><label class="label" for="c-email"><?php esc_html_e( 'Email', 'bshealthcare' ); ?></label><input class="input" id="c-email" name="email" type="email" placeholder="you@example.com"></div>
