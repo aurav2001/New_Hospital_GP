@@ -70,6 +70,34 @@
   .bs-tab { @apply shrink-0 rounded-xl border border-navy-200 bg-white px-4 py-2.5 text-sm font-bold text-navy-600 transition-colors hover:border-primary-300 hover:text-primary-700; }
   .bs-tab.is-active { @apply bg-primary-600 text-white border-primary-600; }
 
+  /* Brand site logo */
+  .bs-site-logo {
+    display: block;
+    height: var(--bs-logo-h-mobile, 44px);
+    width: auto;
+    max-width: 240px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+  @media (min-width: 640px) {
+    .bs-site-logo {
+      height: var(--bs-logo-h-sm, 48px);
+      max-width: 280px;
+    }
+  }
+  @media (min-width: 768px) {
+    .bs-site-logo {
+      height: var(--bs-logo-h-md, 56px);
+      max-width: 320px;
+    }
+  }
+  @media (min-width: 1024px) {
+    .bs-site-logo {
+      height: var(--bs-logo-h-desktop, 68px);
+      max-width: 380px;
+    }
+  }
+
   /* Primary nav menu (wp_nav_menu output) */
   .bs-menu { @apply flex items-center gap-1 list-none m-0 p-0; }
   .bs-menu > li > a { @apply relative flex items-center gap-1 px-3.5 py-2 text-sm font-semibold rounded-lg whitespace-nowrap text-navy-600 no-underline transition-colors hover:text-primary-700 hover:bg-primary-50; }

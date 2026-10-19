@@ -15,6 +15,7 @@ define( 'BS_URI', get_template_directory_uri() );
 
 require_once BS_DIR . '/inc/helpers.php';
 require_once BS_DIR . '/inc/setup.php';
+require_once BS_DIR . '/inc/svg-support.php';
 require_once BS_DIR . '/inc/roles.php';
 require_once BS_DIR . '/inc/post-types.php';
 require_once BS_DIR . '/inc/meta-boxes.php';

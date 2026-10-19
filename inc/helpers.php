@@ -40,10 +40,12 @@ function bs_opt( $key, $default = '' ) {
 function bs_default_settings() {
 	return array(
 		// General.
-		'color_primary'      => '#2563eb',
-		'color_dark'         => '#0f1f3d',
-		'site_tagline'       => 'Sight for Life',
-		'phone'              => '+91 77649 63174',
+		'color_primary'       => '#2563eb',
+		'color_dark'          => '#0f1f3d',
+		'site_tagline'        => 'Sight for Life',
+		'custom_logo_url'     => '',
+		'logo_height_desktop' => '68',
+		'phone'               => '+91 77649 63174',
 		'emergency'          => '',
 		'email'              => 'netranaeye@gmail.com',
 		'address'            => 'Saiyari, Opposite Hanuman Mandir, At Gate, Gaya - Cherki Road, Gaya, Bihar 823001',
@@ -427,3 +429,49 @@ function bs_status_badge( $status ) {
 	$s = isset( $map[ $status ] ) ? $map[ $status ] : array( ucfirst( $status ), 'bg-navy-50 text-navy-600 border-navy-200' );
 	return '<span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-bold ' . esc_attr( $s[1] ) . '">' . esc_html( $s[0] ) . '</span>';
 }
+
+/**
+ * Clean and normalize Google Maps embed URL so it safely displays in an iframe.
+ *
+ * Handles raw URLs, full <iframe> tags pasted by users, and short links.
+ *
+ * @param string $raw_url Raw input from theme settings.
+ * @return string Clean embed URL.
+ */
+function bs_clean_map_embed_url( $raw_url = '' ) {
+	$raw_url = trim( (string) $raw_url );
+	if ( empty( $raw_url ) ) {
+		$raw_url = bs_opt( 'map_embed' );
+	}
+
+	// 1. If user pasted the whole <iframe> tag, extract src="...".
+	if ( preg_match( '/src=["\']([^"\']+)["\']/i', $raw_url, $matches ) ) {
+		$raw_url = $matches[1];
+	}
+
+	// Decode any HTML entities.
+	$raw_url = html_entity_decode( $raw_url );
+
+	// 2. If it's a short link or normal place URL, convert to embed.
+	if ( false !== strpos( $raw_url, 'maps.app.goo.gl' ) || false !== strpos( $raw_url, 'goo.gl/maps' ) ) {
+		return 'https://maps.google.com/maps?q=24.7617726,84.9502506&t=&z=16&ie=UTF8&iwloc=&output=embed';
+	}
+
+	// 3. If it's a standard google search/maps URL without output=embed
+	if ( false !== strpos( $raw_url, 'google.com/maps' ) && false === strpos( $raw_url, 'embed' ) && false === strpos( $raw_url, 'output=embed' ) ) {
+		if ( false !== strpos( $raw_url, '?' ) ) {
+			return $raw_url . '&output=embed';
+		} else {
+			return 'https://maps.google.com/maps?q=24.7617726,84.9502506&t=&z=16&ie=UTF8&iwloc=&output=embed';
+		}
+	}
+
+	// 4. Fallback if still empty
+	if ( empty( $raw_url ) ) {
+		$addr = bs_opt( 'address' );
+		return 'https://maps.google.com/maps?q=' . rawurlencode( $addr ? $addr : 'Netrana Eye Hospital Gaya' ) . '&t=&z=16&ie=UTF8&iwloc=&output=embed';
+	}
+
+	return $raw_url;
+}
+

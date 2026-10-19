@@ -14,7 +14,7 @@ function bs_setup() {
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption', 'style', 'script' ) );
-	add_theme_support( 'custom-logo', array( 'height' => 88, 'width' => 88, 'flex-height' => true, 'flex-width' => true ) );
+	add_theme_support( 'custom-logo', array( 'height' => 90, 'width' => 360, 'flex-height' => true, 'flex-width' => true ) );
 	add_theme_support( 'responsive-embeds' );
 	add_theme_support( 'align-wide' );
 

@@ -14,8 +14,10 @@ function bs_settings_tabs() {
 		'general'      => array(
 			'label'  => __( 'General & Contact', 'bshealthcare' ),
 			'fields' => array(
-				'site_tagline'     => array( 'Tagline (under logo)', 'text' ),
-				'phone'            => array( 'Phone', 'text' ),
+				'site_tagline'        => array( 'Tagline (under logo)', 'text' ),
+				'custom_logo_url'     => array( 'Header Logo (SVG, PNG, JPG)', 'image', 'Upload your logo here or via Appearance → Customize → Site Identity.' ),
+				'logo_height_desktop' => array( 'Desktop Logo Height in pixels', 'number', 'Default is 68. Change if you want the desktop logo taller (e.g. 75, 80) or smaller.' ),
+				'phone'               => array( 'Phone', 'text' ),
 				'emergency'        => array( 'Emergency number (optional)', 'text' ),
 				'email'            => array( 'Email', 'email' ),
 				'address'          => array( 'Address', 'text' ),
@@ -23,8 +25,8 @@ function bs_settings_tabs() {
 				'hours_inpatient'  => array( 'Inpatient care', 'text' ),
 				'whatsapp_enabled' => array( 'Show WhatsApp button', 'checkbox' ),
 				'whatsapp_number'  => array( 'WhatsApp number (with country code)', 'text', 'e.g. 919525334214' ),
-				'whatsapp_message' => array( 'WhatsApp default message', 'text' ),
-				'map_embed'        => array( 'Google Maps embed URL', 'textarea', 'Google Maps → Share → Embed a map → copy the src="…" URL only.' ),
+				'map_embed'        => array( 'Google Maps embed URL or <iframe> code', 'textarea', 'Paste either the embed URL or the entire Google Maps <iframe> code.' ),
+				'map_link'         => array( 'Google Maps link (for "Visit us" button)', 'url', 'e.g. https://maps.app.goo.gl/ZaTGDVq2e7E5cdhh9' ),
 				'social_facebook'  => array( 'Facebook URL', 'url' ),
 				'social_twitter'   => array( 'Twitter / X URL', 'url' ),
 				'social_instagram' => array( 'Instagram URL', 'url' ),

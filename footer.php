@@ -31,7 +31,7 @@ $bs_social = array( 'facebook', 'twitter', 'instagram', 'linkedin', 'youtube' );
 	<div class="container-x grid gap-10 md:grid-cols-2 lg:grid-cols-12 pb-12">
 		<div class="lg:col-span-4">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="inline-flex items-center mb-5" rel="home">
-				<img src="<?php echo esc_url( BS_URI . '/assets/img/logo-white.svg' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" class="h-10 lg:h-11 w-auto object-contain shrink-0" />
+				<img src="<?php echo esc_url( BS_URI . '/assets/img/logo-white.svg' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" class="h-12 lg:h-14 w-auto max-w-[280px] lg:max-w-[340px] object-contain shrink-0" />
 				<span class="sr-only"><?php bloginfo( 'name' ); ?></span>
 			</a>
 			<p class="text-navy-300 leading-relaxed mb-6 max-w-sm"><?php echo esc_html( bs_opt( 'footer_description' ) ); ?></p>
@@ -118,7 +118,7 @@ $bs_social = array( 'facebook', 'twitter', 'instagram', 'linkedin', 'youtube' );
 	<?php if ( bs_opt( 'map_embed' ) ) : ?>
 	<div class="container-x pb-12">
 		<div class="rounded-2xl overflow-hidden border border-navy-700 h-64 md:h-72 bg-navy-800">
-			<iframe title="<?php esc_attr_e( 'Hospital location', 'bshealthcare' ); ?>" src="<?php echo esc_url( bs_opt( 'map_embed' ) ); ?>" width="100%" height="100%" style="border:0;filter:grayscale(20%)" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			<iframe title="<?php esc_attr_e( 'Hospital location', 'bshealthcare' ); ?>" src="<?php echo esc_url( bs_clean_map_embed_url( bs_opt( 'map_embed' ) ) ); ?>" width="100%" height="100%" style="border:0;filter:grayscale(20%)" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		</div>
 	</div>
 	<?php endif; ?>

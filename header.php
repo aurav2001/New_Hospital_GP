@@ -12,6 +12,11 @@ $bs_user    = wp_get_current_user();
 $bs_dash    = is_user_logged_in() ? bs_dashboard_url_for_user( $bs_user ) : bs_page_url( 'templates/template-login.php' );
 $bs_appt    = bs_page_url( 'templates/template-appointment.php' );
 $bs_logo_id  = (int) get_theme_mod( 'custom_logo' );
+$bs_logo_url = bs_opt( 'custom_logo_url' );
+$bs_logo_h   = (int) bs_opt( 'logo_height_desktop' );
+if ( ! $bs_logo_h || $bs_logo_h < 30 || $bs_logo_h > 150 ) {
+	$bs_logo_h = 68;
+}
 $bs_services = get_posts( array( 'post_type' => 'bs_service', 'numberposts' => 8, 'orderby' => 'menu_order title', 'order' => 'ASC' ) );
 ?>
 <!doctype html>
@@ -49,7 +54,7 @@ $bs_services = get_posts( array( 'post_type' => 'bs_service', 'numberposts' => 8
 
 	<!-- Navbar -->
 	<nav id="bs-nav" class="bg-white border-b border-navy-100 transition-shadow">
-		<div class="container-x h-16 lg:h-[72px] flex items-center justify-between gap-4">
+		<div class="container-x h-16 md:h-20 lg:h-[88px] flex items-center justify-between gap-4">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="flex items-center gap-2.5 min-w-0" rel="home">
 				<?php if ( $bs_logo_id ) : ?>
 					<?php
@@ -60,13 +65,16 @@ $bs_services = get_posts( array( 'post_type' => 'bs_service', 'numberposts' => 8
 						'full',
 						false,
 						array(
-							'class' => 'h-10 lg:h-12 w-auto object-contain shrink-0',
+							'class' => 'bs-site-logo h-11 sm:h-12 md:h-14 lg:h-16 xl:h-[68px] w-auto object-contain shrink-0',
 							'alt'   => esc_attr( get_bloginfo( 'name' ) ),
+							'style' => '--bs-logo-h-desktop:' . esc_attr( $bs_logo_h ) . 'px;',
 						)
 					);
 					?>
+				<?php elseif ( $bs_logo_url ) : ?>
+					<img src="<?php echo esc_url( $bs_logo_url ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" class="bs-site-logo h-11 sm:h-12 md:h-14 lg:h-16 xl:h-[68px] w-auto object-contain shrink-0" style="--bs-logo-h-desktop:<?php echo esc_attr( $bs_logo_h ); ?>px;" />
 				<?php else : ?>
-					<img src="<?php echo esc_url( BS_URI . '/assets/img/logo.svg' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" class="h-12 lg:h-14 w-auto object-contain shrink-0" />
+					<img src="<?php echo esc_url( BS_URI . '/assets/img/logo.svg' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" class="bs-site-logo h-11 sm:h-12 md:h-14 lg:h-16 xl:h-[68px] w-auto object-contain shrink-0" style="--bs-logo-h-desktop:<?php echo esc_attr( $bs_logo_h ); ?>px;" />
 				<?php endif; ?>
 				<span class="sr-only"><?php bloginfo( 'name' ); ?></span>
 			</a>
@@ -126,7 +134,7 @@ $bs_services = get_posts( array( 'post_type' => 'bs_service', 'numberposts' => 8
 		</div>
 	</nav>
 </header>
-<div class="h-16 lg:h-[72px] md:mt-10" aria-hidden="true"></div>
+<div class="h-16 md:h-20 lg:h-[88px] md:mt-10" aria-hidden="true"></div>
 
 <!-- Mobile drawer -->
 <div id="bs-drawer-overlay" class="hidden fixed inset-0 bg-navy-900/40 backdrop-blur-sm z-[110] lg:hidden"></div>
@@ -140,13 +148,15 @@ $bs_services = get_posts( array( 'post_type' => 'bs_service', 'numberposts' => 8
 					'full',
 					false,
 					array(
-						'class' => 'h-8 w-auto object-contain',
+						'class' => 'h-10 w-auto object-contain',
 						'alt'   => esc_attr( get_bloginfo( 'name' ) ),
 					)
 				);
 				?>
+			<?php elseif ( $bs_logo_url ) : ?>
+				<img src="<?php echo esc_url( $bs_logo_url ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" class="h-10 w-auto object-contain" />
 			<?php else : ?>
-				<img src="<?php echo esc_url( BS_URI . '/assets/img/logo.svg' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" class="h-8 w-auto object-contain" />
+				<img src="<?php echo esc_url( BS_URI . '/assets/img/logo.svg' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" class="h-10 w-auto object-contain" />
 			<?php endif; ?>
 			<span class="sr-only"><?php bloginfo( 'name' ); ?></span>
 		</a>
