@@ -170,7 +170,7 @@ $wa    = bs_whatsapp_url();
 
 					<div class="mt-8 pt-6 border-t border-navy-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
 						<div class="flex items-center gap-4">
-							<img src="<?php echo esc_url( BS_URI . '/assets/img/doctor-arvind.jpg' ); ?>" alt="Dr. Arvind Kumar" class="w-16 h-16 rounded-2xl object-cover shadow-card shrink-0">
+							<img src="<?php echo esc_url( 'https://netranaeyehospital.com/wp-content/uploads/2026/10/iavv75ix2ebrfheucnc2.jpg' ); ?>" alt="Dr. Arvind Kumar" class="w-16 h-16 rounded-2xl object-cover shadow-card shrink-0">
 							<div>
 								<h3 class="text-xl font-bold text-navy-800"><?php esc_html_e( 'Dr. Arvind Kumar', 'bshealthcare' ); ?></h3>
 								<p class="text-sm font-semibold text-primary-700"><?php esc_html_e( 'Director & Chief Eye Care Specialist', 'bshealthcare' ); ?></p>
