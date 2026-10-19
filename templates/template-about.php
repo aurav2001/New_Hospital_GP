@@ -120,6 +120,10 @@ $wa    = bs_whatsapp_url();
 							</li>
 							<li class="flex items-center gap-2.5">
 								<span class="text-emerald-400"><?php bs_the_icon( 'check-circle', 16 ); ?></span>
+								<span><?php esc_html_e( '24x7 Critical Care & Emergency Life-Support', 'bshealthcare' ); ?></span>
+							</li>
+							<li class="flex items-center gap-2.5">
+								<span class="text-emerald-400"><?php bs_the_icon( 'check-circle', 16 ); ?></span>
 								<span><?php esc_html_e( 'Computerised Auto-Refraction & Lens Fitting', 'bshealthcare' ); ?></span>
 							</li>
 						</ul>
